@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Adequate Success Online College – affordable, faith‑based, accredited online education. Explore courses, tuition, and enroll today.">
+    <!-- Open Graph / Social Media Sharing Meta Tags (using the flyer design) -->
+    <meta property="og:title" content="Adequate Success Online University – Sign up for free courses!" />
+    <meta property="og:description" content="Learn AI, Web Design, Excel & MS PPT. Get certified with flexible schedules. No tuition fees! Join now." />
+    <!-- For actual deployment, replace with your hosted image URL. We use a placeholder that should point to your flyer image. -->
+    <meta property="og:image" content="https://asou-edu.netlify.app/og-image.png" />
+    <meta property="og:url" content="https://asou-edu.netlify.app" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:type" content="website" />
+    <title>Adequate Success Online College</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; }
+        body { font-family: 'Segoe UI', Roboto, Arial, sans-serif; background: #f4f6f9; line-height: 1.6; }
+        header { background: #0a2a43; color: white; padding: 1rem 2rem; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; }
+        header h1 { font-size: 1.8rem; margin: 0.2rem 0; }
+        nav { display: flex; flex-wrap: wrap; gap: 0.5rem 1.2rem; }
+        nav a { color: white; text-decoration: none; font-weight: 600; cursor: pointer; padding: 0.3rem 0; border-bottom: 2px solid transparent; transition: 0.2s; }
+        nav a:hover { border-bottom-color: #ff9800; }
+        section { display: none; padding: 2.5rem 2rem; max-width: 1200px; margin: 0 auto; }
+        .hero { background: linear-gradient(145deg, #0a2a43, #145374); color: white; padding: 4rem 2rem; text-align: center; border-radius: 0 0 20px 20px; margin-bottom: 2rem; }
+        .hero h2 { font-size: 2.8rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.3rem; max-width: 700px; margin: 0 auto; }
+        .button, button.button { background: #ff9800; color: white; padding: 12px 28px; border: none; border-radius: 50px; font-weight: bold; font-size: 1rem; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.2); transition: 0.2s; margin: 5px 0; border: 1px solid transparent; }
+        .button:hover { background: #e68900; transform: scale(1.02); }
+        .button.small { padding: 6px 15px; font-size: 0.9rem; }
+        .button.danger { background: #c0392b; }
+        .button.danger:hover { background: #a93226; }
+        .button.secondary { background: #2c3e50; }
+        .button.secondary:hover { background: #1e2b37; }
+        .button.success { background: #27ae60; }
+        .button.success:hover { background: #1e8449; }
+        input, select, textarea { padding: 12px; margin: 10px 0; width: 100%; max-width: 450px; border: 1px solid #ccc; border-radius: 30px; font-size: 1rem; outline: none; }
+        input:focus, select:focus { border-color: #0a2a43; box-shadow: 0 0 0 3px rgba(10,42,67,0.2); }
+        .card { background: white; padding: 25px; margin: 25px 0; border-radius: 24px; box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+        .grid-2, .grid-3 { display: grid; gap: 2rem; margin-top: 2rem; }
+        .grid-2 { grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); }
+        .grid-3 { grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); }
+        .course-card { background: #f9fcff; padding: 1.8rem; border-radius: 20px; border-left: 8px solid #0a2a43; box-shadow: 0 8px 18px rgba(0,0,0,0.05); }
+        .course-card h3 { color: #0a2a43; margin-bottom: 0.5rem; }
+        table { border-collapse: collapse; width: 100%; background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 6px 18px rgba(0,0,0,0.05); }
+        th { background: #0a2a43; color: white; padding: 15px 10px; font-weight: 600; }
+        td, th { border: none; padding: 14px 12px; text-align: left; border-bottom: 1px solid #e0e6ed; }
+        tr:last-child td { border-bottom: none; }
+        .badge { background: #ff9800; color: #0a2a43; padding: 5px 15px; border-radius: 40px; font-weight: bold; display: inline-block; margin-top: 10px; }
+        footer { background: #0a2a43; color: white; text-align: center; padding: 2rem; font-size: 0.95rem; }
+        footer a { color: #ffb04d; text-decoration: none; }
+        .message { font-weight: 600; margin: 10px 0; color: #b85c00; }
+        .success-msg { color: #1e7e34; }
+        hr { border: 1px solid #ddd; margin: 2rem 0; }
+        .contact-info p { margin: 0.5rem 0; }
+        .social-links a { color: white; margin: 0 10px; font-size: 1.5rem; text-decoration: none; }
+        .admin-subsection { background: #f0f4fa; padding: 20px; border-radius: 20px; margin: 30px 0 10px; }
+        .course-item { display: flex; justify-content: space-between; align-items: center; background: white; padding: 10px 20px; margin: 8px 0; border-radius: 40px; }
+        .hidden { display: none; }
+        #contactSuccess { background: #d4edda; color: #155724; padding: 15px; border-radius: 50px; margin-top: 15px; text-align: center; }
+        .small-input { width: 80px; display: inline-block; margin-right: 8px; }
+        .action-cell { display: flex; gap: 6px; flex-wrap: wrap; }
+        .export-btn { margin-bottom: 15px; }
+        .courseware-list { list-style: none; padding: 0; }
+        .courseware-list li { background: #f9f9f9; margin: 8px 0; padding: 12px 18px; border-radius: 40px; display: flex; justify-content: space-between; align-items: center; }
+        .courseware-list a { text-decoration: none; color: #0a2a43; font-weight: 500; }
+        .courseware-list a:hover { text-decoration: underline; }
+        .payment-details { background: #e8f0fe; padding: 20px; border-radius: 24px; border: 2px dashed #0a2a43; margin: 25px 0; }
+        .payment-details h3 { color: #0a2a43; margin-top: 0; }
+        .payment-details .account-number { font-size: 2rem; font-weight: bold; color: #c0392b; letter-spacing: 2px; }
+        /* Passport photo styles - RECTANGULAR (no rounding) */
+        .passport-container { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin-bottom: 20px; }
+        .passport-image { width: 120px; height: 120px; object-fit: cover; border: 4px solid #0a2a43; background: #ddd; border-radius: 0; }
+        .passport-placeholder { width: 120px; height: 120px; background: #ddd; display: flex; align-items: center; justify-content: center; color: #666; font-size: 0.9rem; border: 4px solid #0a2a43; border-radius: 0; }
+        .upload-btn-wrapper { position: relative; overflow: hidden; display: inline-block; }
+        .upload-btn-wrapper input[type=file] { position: absolute; left: 0; top: 0; opacity: 0; width: 100%; height: 100%; cursor: pointer; }
+        .thumbnail { width: 50px; height: 50px; object-fit: cover; border: 2px solid #0a2a43; border-radius: 0; }
+        /* Flyer / Promo Card Styles (clickable) */
+        .promo-flyer {
+            background: linear-gradient(145deg, #f9c74f, #f9844a);
+            color: #0a2a43;
+            padding: 2rem;
+            border-radius: 40px;
+            text-align: center;
+            box-shadow: 0 20px 30px rgba(0,0,0,0.2);
+            border: 4px solid white;
+            max-width: 600px;
+            margin: 2rem auto;
+            transition: transform 0.2s;
+        }
+        .promo-flyer:hover {
+            transform: scale(1.02);
+            box-shadow: 0 25px 35px rgba(0,0,0,0.3);
+        }
+        .promo-flyer h2 {
+            font-size: 2.5rem;
+            font-weight: 900;
+            text-shadow: 2px 2px 0 rgba(255,255,255,0.5);
+        }
+        .promo-flyer .free-badge {
+            background: #0a2a43;
+            color: #ff9800;
+            font-size: 3rem;
+            font-weight: bold;
+            padding: 0.5rem 2rem;
+            border-radius: 60px;
+            display: inline-block;
+            margin: 1rem 0;
+        }
+        .promo-flyer ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            font-weight: bold;
+            margin: 1.5rem 0;
+        }
+        .promo-flyer li {
+            background: rgba(255,255,255,0.4);
+            padding: 0.5rem 1.5rem;
+            border-radius: 40px;
+        }
+        .promo-flyer .call-us {
+            font-size: 1.8rem;
+            background: white;
+            color: #0a2a43;
+            padding: 0.5rem 2rem;
+            border-radius: 50px;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+        .promo-flyer a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        /* Reset password form */
+        #resetPasswordForm {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f0f4fa;
+            border-radius: 20px;
+        }
+        @media (max-width: 700px) { header { flex-direction: column; } nav { justify-content: center; margin-top: 0.8rem; } }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Adequate Success Online College</h1>
+    <nav>
+        <a onclick="showSection('home')">Home</a>
+        <a onclick="showSection('about')">About</a>
+        <a onclick="showSection('courses')">Courses</a>
+        <a onclick="showSection('tuition')">Tuition</a>
+        <a onclick="showSection('contact')">Contact</a>
+        <a onclick="showSection('signup')">Sign Up</a>
+        <a onclick="showSection('studentLogin')">Student Login</a>
+        <a onclick="showSection('adminLogin')">Admin Login</a>
+        <a onclick="shareSite()">📤 Share Signup</a>
+    </nav>
+</header>
+
+<!-- ========== PUBLIC INFO SECTIONS ========== -->
+<section id="home" style="display:block;">
+    <div class="hero">
+        <h2>Empowering Lives Through Faith & Education</h2>
+        <p>Accredited online programs · Flexible schedules · Rooted in values</p>
+        <button class="button" onclick="showSection('courses')" style="margin-top:25px;">Explore Programs</button>
+    </div>
+
+    <!-- ===== CLICKABLE PROMO FLYER ===== -->
+    <a href="https://asou-edu.netlify.app" target="_blank" style="text-decoration: none;">
+        <div class="promo-flyer">
+            <h2>ADEQUATESUCCESS<br>ONLINE UNIVERSITY</h2>
+            <p style="font-size:1.5rem;">LEARN & GROW YOUR FUTURE!</p>
+            <div class="free-badge">100% TUITION FREE!</div>
+            <p style="font-size:1.2rem;">www.asou-edu.netlify.app</p>
+            <p style="font-size:1.3rem; font-weight:bold;">Acquire In-Demand Skills Online!</p>
+            <ul>
+                <li>LEARN AI</li>
+                <li>WEB DESIGN</li>
+                <li>EXCEL & MS PPT</li>
+                <li>PAY HOSTING & DOMAIN</li>
+            </ul>
+            <div class="call-us">CALL: 09075614558</div>
+            <p style="margin-top:1.5rem;">No Tuition Fees! Learn Anytime, Anywhere!</p>
+            <p style="font-size:1.2rem;">- CERTIFICATE COURSES - FLEXIBLE SCHEDULE - GLOBAL LEARNING</p>
+        </div>
+    </a>
+
+    <div class="grid-2" style="margin-top:2rem;">
+        <div class="card"><h3>🎓 Why Choose Us?</h3><p>Since 2010, we’ve helped over 5,000 students achieve their goals with affordable, Christ‑centered online education. Small classes, dedicated mentors.</p></div>
+        <div class="card"><h3>⏳ Flexible Learning</h3><p>100% online, self‑paced courses with weekly live sessions. Balance work, family, and studies.</p></div>
+        <div class="card"><h3>📜 Accreditation</h3><p>Recognized by the Distance Education Accrediting Commission (DEAC). Transfer credits accepted.</p></div>
+        <div class="card"><h3>🙏 Faith Integration</h3><p>All programs include optional courses in ethics, leadership, and service learning.</p></div>
+    </div>
+</section>
+
+<section id="about">
+    <h2>About Adequate Success</h2>
+    <div class="card">
+        <p style="font-size:1.2rem;">Founded in 2010, Adequate Success Online College exists to provide accessible, values‑driven higher education to students from all walks of life. We blend academic rigor with spiritual growth, preparing graduates for both career and purpose.</p>
+        <hr>
+        <h3>Mission & Vision</h3>
+        <p><strong>Mission:</strong> To equip learners with skills, integrity, and hope through flexible online programs rooted in excellence and faith.</p>
+        <p><strong>Vision:</strong> A world where quality education is within everyone's reach, fostering community and transformation.</p>
+        <hr>
+        <h3>Our Management Team</h3>
+        <div class="grid-3">
+            <div><strong>Solomon Daniel</strong> — Vice Chancellor (VC)</div>
+            <div><strong>Deborah Solomon</strong> — Director of Dean</div>
+            <div><strong>Adebowale Segun</strong> — Dean of Faculty</div>
+            <div><strong>Adebowale Daniel</strong> — Admin</div>
+            <div><strong>Funmilayo Adebowale</strong> — Registrar</div>
+        </div>
+    </div>
+</section>
+
+<section id="courses">
+    <h2>Undergraduate & Graduate Programs</h2>
+    <div class="grid-3" id="publicCoursesContainer">
+        <!-- dynamically populated from db.courses later -->
+    </div>
+</section>
+
+<!-- ========== TUITION with OPAY PAYMENT DETAILS ========== -->
+<section id="tuition">
+    <h2>100% free online Program</h2>
+    <div class="card">
+        <table>
+            <tr><th>Program</th><th>Cost per credit</th><th>Estimated total</th></tr>
+            <tr><td>Associate / Bachelor's</td><td>$0</td><td>$0 (BA, 120cr)</td></tr>
+            <tr><td>Master's programs</td><td>$0</td><td>$0(MA, 36cr)</td></tr>
+            <tr><td>Certificates</td><td>$0</td><td>$0 (18cr)</td></tr>
+            <tr><td colspan="3"><small>* Textbook fees ~$5/course. Military & ministry discounts available.</small></td></tr>
+        </table>
+        <p style="margin-top:30px;">📌 80% of students receive grants or scholarships. FAFSA code: 012345. Monthly payment plans.</p>
+        <button class="button" onclick="showSection('contact')">Ask about financial aid</button>
+    </div>
+
+    <!-- OPAY PAYMENT ACCOUNT (NIGERIA) with account name -->
+    <div class="payment-details">
+        <h3>💳 Make Payment via Opay</h3>
+        <p>Send your tuition or fees directly to our official Opay account:</p>
+        <div style="background: white; padding: 20px; border-radius: 20px; text-align: center;">
+            <p style="font-size: 1.2rem; margin-bottom: 5px;">Opay Account Number</p>
+            <div class="account-number">8034212065</div>
+            <p style="margin-top: 10px;"><strong>Account Name:</strong> Adrbowale Segun Solomon</p>
+            <p><strong>Bank:</strong> Opay Digital Services</p>
+        </div>
+        <p style="margin-top: 15px;">After payment, please email your receipt to <strong>finance@adequatesuccess.edu@gmail.com</strong> with your full name and student ID (if available).</p>
+    </div>
+</section>
+
+<!-- ========== CONTACT with NETLIFY FORM ========== -->
+<section id="contact">
+    <h2>Get in Touch</h2>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+        <div class="card">
+            <h3>📬 Contact info</h3>
+            <p>📍 1221 Success Blvd, Suite 200<br>   Orlando, FL 32801</p>
+          <p>📞 (234) 9075614458 (Mon–Fri, 9am–7pm ET)</p>
+            <p>📧 admissions@adeqsuccess.edu</p>
+            <p>🌐 social: @AdequateSuccess (LinkedIn, Twitter)</p>
+        </div>
+        <div class="card">
+            <h3>✉️ Send us a message</h3>
+            <!-- Netlify form: detected automatically, submitted via AJAX -->
+            <form id="netlifyContact" data-netlify="true" netlify-honeypot="bot-field" name="contact" method="POST">
+                <input type="hidden" name="form-name" value="contact" />
+                <p class="hidden">
+                    <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+                </p>
+                <input type="text" name="name" id="contactName" placeholder="Your name" required />
+                <input type="email" name="email" id="contactEmail" placeholder="Email address" required />
+                <textarea name="message" id="contactMsg" rows="4" placeholder="Your question / message" required style="border-radius:20px;"></textarea>
+                <button type="submit" class="button" id="contactSubmit">Send Message</button>
+            </form>
+            <div id="contactSuccess" class="hidden">✅ Thank you! We’ll reply within 2 business days.</div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== AUTH & DASHBOARDS ========== -->
+<section id="signup">
+    <h2>Student Sign Up (Full Details)</h2>
+    <input id="suFullName" placeholder="Full Name" required>
+    <input id="suEmail" type="email" placeholder="Email Address" required>
+    <input id="suPhone" placeholder="Phone Number (optional)">
+    <input id="suUser" placeholder="Username" required>
+    <input id="suPass" type="password" placeholder="Password" required>
+    <button class="button" onclick="signup()">Create Account</button>
+    <p id="suMsg" class="message"></p>
+</section>
+
+<section id="studentLogin">
+    <h2>Student Login</h2>
+    <input id="stuUser" placeholder="Username">
+    <input id="stuPass" type="password" placeholder="Password">
+    <button class="button" onclick="loginStudent()">Login</button>
+    <p id="stuMsg" class="message"></p>
+    <!-- Forgot password link -->
+    <p><a href="#" onclick="toggleResetForm()">Forgot password?</a></p>
+    <!-- Hidden reset password form -->
+    <div id="resetPasswordForm" style="display: none;">
+        <h3>Reset Password</h3>
+        <input id="resetUser" placeholder="Username" required>
+        <input id="resetNewPass" type="password" placeholder="New Password" required>
+        <input id="resetConfirmPass" type="password" placeholder="Confirm New Password" required>
+        <button class="button small" onclick="resetPassword()">Reset Password</button>
+        <button class="button small secondary" onclick="toggleResetForm()">Cancel</button>
+        <p id="resetMsg" class="message"></p>
+    </div>
+</section>
+
+<section id="adminLogin">
+    <h2>Admin Login</h2>
+    <input id="adUser" placeholder="Admin Username">
+    <input id="adPass" type="password" placeholder="Password">
+    <button class="button" onclick="loginAdmin()">Login</button>
+    <p id="adMsg" class="message"></p>
+</section>
+
+<section id="studentDashboard">
+    <h2>Student Dashboard</h2>
+    <div id="studentContent"></div>
+    <button class="button" onclick="logout()">Logout</button>
+</section>
+
+<section id="adminDashboard">
+    <h2>Admin Portal</h2>
+    <div id="adminContent"></div>
+    <button class="button" onclick="logout()">Logout</button>
+</section>
+
+<footer>
+    <p>© 2026 Adequate Success Online College — Accredited by DEAC | All faiths welcome</p>
+    <p><a href="#" onclick="showSection('about')">About</a> | <a href="#" onclick="showSection('contact')">Contact</a> | <a href="#">Privacy</a></p>
+    <div class="social-links">🔵 🐦 📘</div>
+</footer>
+
+<script>
+    // ---------- PERSISTENT DB with COURSES & COURSEWARE ----------
+    let db = {
+        users: JSON.parse(localStorage.getItem("users")) || [{ username: "admin", password: "admin123", role: "admin" }],
+        enrollments: JSON.parse(localStorage.getItem("enrollments")) || [],
+        grades: JSON.parse(localStorage.getItem("grades")) || [],   // each grade: { username, grade, certificateAllowed (boolean) }
+        // Updated courses: AI, Excel, MS, Web Design
+        courses: JSON.parse(localStorage.getItem("courses")) || [
+            "Introduction to Artificial Intelligence",
+            "Machine Learning Fundamentals",
+            "Deep Learning & Neural Networks",
+            "AI for Business",
+            "Microsoft Excel (Basic to Advanced)",
+            "Microsoft Office Suite",
+            "Web Design (HTML, CSS, JavaScript)",
+            "Advanced Web Development",
+            "Data Science with Python",
+            "Natural Language Processing"
+        ],
+        courseware: JSON.parse(localStorage.getItem("courseware")) || []  // each item: { id, course, title, description, addedBy }
+    };
+
+    // Migrate old users to have fullName, email, phone, passport if missing
+    db.users = db.users.map(u => {
+        if (!u.fullName) u.fullName = '';
+        if (!u.email) u.email = '';
+        if (!u.phone) u.phone = '';
+        if (!u.passport) u.passport = null; // base64 image data
+        return u;
+    });
+
+    // Migrate grades to have certificateAllowed (default false)
+    db.grades = db.grades.map(g => {
+        if (g.certificateAllowed === undefined) g.certificateAllowed = false;
+        return g;
+    });
+
+    function save() {
+        localStorage.setItem("users", JSON.stringify(db.users));
+        localStorage.setItem("enrollments", JSON.stringify(db.enrollments));
+        localStorage.setItem("grades", JSON.stringify(db.grades));
+        localStorage.setItem("courses", JSON.stringify(db.courses));
+        localStorage.setItem("courseware", JSON.stringify(db.courseware));
+    }
+
+    // ---------- UI CONTROLLER ----------
+    function showSection(id) {
+        document.querySelectorAll("section").forEach(s => s.style.display = "none");
+        document.getElementById(id).style.display = "block";
+        // Clear previous messages
+        ["suMsg","stuMsg","adMsg","resetMsg"].forEach(m => { if(document.getElementById(m)) document.getElementById(m).innerText = ""; });
+        // if public courses section, refresh dynamic listing
+        if (id === 'courses') renderPublicCourses();
+        // hide contact success message when leaving contact
+        if (id !== 'contact') {
+            let successDiv = document.getElementById('contactSuccess');
+            if (successDiv) successDiv.classList.add('hidden');
+        }
+        // Hide reset form when leaving studentLogin
+        if (id !== 'studentLogin') {
+            let resetDiv = document.getElementById('resetPasswordForm');
+            if (resetDiv) resetDiv.style.display = 'none';
+        }
+        // Update hash to reflect section (optional)
+        window.location.hash = id;
+    }
+
+    // Toggle reset password form
+    function toggleResetForm() {
+        let form = document.getElementById('resetPasswordForm');
+        if (form.style.display === 'none' || form.style.display === '') {
+            form.style.display = 'block';
+            document.getElementById('resetMsg').innerText = '';
+        } else {
+            form.style.display = 'none';
+        }
+    }
+
+    // Reset password function
+    function resetPassword() {
+        let username = document.getElementById('resetUser').value.trim();
+        let newPass = document.getElementById('resetNewPass').value;
+        let confirmPass = document.getElementById('resetConfirmPass').value;
+        let msg = document.getElementById('resetMsg');
+
+        if (!username || !newPass || !confirmPass) {
+            msg.innerText = 'Please fill all fields.';
+            return;
+        }
+        if (newPass !== confirmPass) {
+            msg.innerText = 'Passwords do not match.';
+            return;
+        }
+        let user = db.users.find(u => u.username === username && u.role === 'student');
+        if (!user) {
+            msg.innerText = 'Username not found.';
+            return;
+        }
+        // Update password
+        user.password = newPass;
+        save();
+        msg.style.color = 'green';
+        msg.innerText = 'Password reset successfully! You can now log in.';
+        // Clear fields
+        document.getElementById('resetUser').value = '';
+        document.getElementById('resetNewPass').value = '';
+        document.getElementById('resetConfirmPass').value = '';
+        // Hide form after 2 seconds
+        setTimeout(() => {
+            toggleResetForm();
+        }, 2000);
+    }
+
+    // display courses from db on public page
+    function renderPublicCourses() {
+        let container = document.getElementById("publicCoursesContainer");
+        if (!container) return;
+        let html = '';
+        db.courses.forEach(course => {
+            html += `<div class="course-card"><h3>📘 ${course}</h3><p>Comprehensive online program. Click to view details.</p><span class="badge">available</span></div>`;
+        });
+        if (html === '') html = '<p>No courses listed yet. Check back soon.</p>';
+        container.innerHTML = html;
+    }
+
+    // ---------- SIGNUP (with full details) ----------
+    function signup() {
+        let fullName = document.getElementById("suFullName")?.value.trim();
+        let email = document.getElementById("suEmail")?.value.trim();
+        let phone = document.getElementById("suPhone")?.value.trim();
+        let user = document.getElementById("suUser")?.value.trim();
+        let pass = document.getElementById("suPass")?.value;
+        let msg = document.getElementById("suMsg");
+
+        if (!fullName || !email || !user || !pass) {
+            msg.innerText = "Please fill all required fields (Name, Email, Username, Password).";
+            return;
+        }
+        if (!/^\S+@\S+\.\S+$/.test(email)) {
+            msg.innerText = "Enter a valid email address.";
+            return;
+        }
+        if (db.users.find(u => u.username === user)) {
+            msg.innerText = "Username already exists.";
+            return;
+        }
+        // optional: check email uniqueness? we can skip.
+
+        db.users.push({
+            username: user,
+            password: pass,
+            role: "student",
+            fullName: fullName,
+            email: email,
+            phone: phone || "",
+            passport: null
+        });
+        save();
+        msg.style.color = "green";
+        msg.innerText = "Account created! You can now log in.";
+        // clear form
+        document.getElementById("suFullName").value = "";
+        document.getElementById("suEmail").value = "";
+        document.getElementById("suPhone").value = "";
+        document.getElementById("suUser").value = "";
+        document.getElementById("suPass").value = "";
+    }
+
+    // ---------- LOGIN ----------
+    function loginStudent() {
+        let user = document.getElementById("stuUser")?.value;
+        let pass = document.getElementById("stuPass")?.value;
+        let found = db.users.find(u => u.username === user && u.password === pass && u.role === "student");
+        if (found) {
+            localStorage.setItem("currentUser", JSON.stringify(found));
+            showStudentDashboard(found);
+        } else {
+            document.getElementById("stuMsg").innerText = "Invalid login";
+        }
+    }
+
+    function loginAdmin() {
+        let adUser = document.getElementById("adUser")?.value;
+        let adPass = document.getElementById("adPass")?.value;
+        let admin = db.users.find(u => u.username === adUser && u.password === adPass && u.role === "admin");
+        if (admin) {
+            localStorage.setItem("currentAdmin", JSON.stringify(admin));
+            showAdminDashboard();
+        } else {
+            document.getElementById("adMsg").innerText = "Invalid admin login";
+        }
+    }
+
+    // ---------- STUDENT DASHBOARD (with rectangular passport) ----------
+    function showStudentDashboard(user) {
+        showSection("studentDashboard");
+        let enrolled = db.enrollments.find(e => e.username === user.username);
+        let content = "<div class='card'>";
+
+        // ----- Passport section (rectangular) -----
+        content += "<div class='passport-container'>";
+        if (user.passport) {
+            content += `<img src="${user.passport}" alt="Passport" class="passport-image">`;
+        } else {
+            content += `<div class="passport-placeholder">No Photo</div>`;
+        }
+        content += `<div>
+            <h3>Welcome, ${user.fullName} (${user.username}) ✨</h3>`;
+        if (user.phone) content += `<p><b>Phone:</b> ${user.phone}</p>`;
+        content += `<p><b>Email:</b> ${user.email}</p>`;
+        content += `<div class="upload-btn-wrapper">
+                <button class="button small">Upload Passport</button>
+                <input type="file" accept="image/*" onchange="uploadPassport(event)">
+            </div>
+        </div></div>`;
+
+        // ----- Enrollment / Courseware section -----
+        if (!enrolled) {
+            // Build dropdown from updated courses
+            let options = '<option value="">-- Select a course --</option>';
+            db.courses.forEach(c => options += `<option value="${c}">${c}</option>`);
+            // Pre-fill name and email from user profile
+            content += `<h4>📝 Enrollment Form</h4>
+                <input id='fullName' placeholder='Full Legal Name' value='${user.fullName}' required><br>
+                <input id='email' placeholder='Email Address' value='${user.email}' required><br>
+                <label>Choose program:</label><br>
+                <select id='courseSelect'>${options}</select><br>
+                <button class='button' onclick='submitEnrollment()'>Submit Enrollment</button>`;
+        } else {
+            let statusColor = enrolled.status === 'Approved' ? 'green' : (enrolled.status === 'Rejected' ? '#c0392b' : '#b85c00');
+            content += `<p><b>Enrollment status:</b> <span style="color:${statusColor};">${enrolled.status}</span></p>
+                <p><b>Course:</b> ${enrolled.course}</p>`;
+
+            if (enrolled.status === 'Approved') {
+                let grade = db.grades.find(g => g.username === user.username);
+                if (grade) {
+                    content += `<p><b>Final grade:</b> ${grade.grade} / 100</p>`;
+                    // Only show certificate button if admin has allowed it
+                    if (grade.certificateAllowed) {
+                        content += `<button class='button' onclick='generateCertificate("${user.username}")'>📄 Download Certificate (with passport)</button>`;
+                    } else {
+                        content += `<p><i>Certificate not yet approved by admin.</i></p>`;
+                    }
+                } else {
+                    content += "<p><i>Grades will appear here once approved by admin.</i></p>";
+                }
+
+                // ----- Courseware for approved students only -----
+                content += `<div class="payment-details" style="margin-top:15px;">
+                    <h4>💳 Tuition Payment</h4>
+                    <p>If you haven't paid yet, please use our Opay account:</p>
+                    <p class="account-number" style="font-size:1.5rem;">8034212065</p>
+                    <p><strong>Account Name:</strong> Adrbowale Segun Solomon</p>
+                    <p>Email receipt to finance@adeqsuccess.edu</p>
+                </div>`;
+
+                let courseMaterials = db.courseware.filter(cw => cw.course === enrolled.course);
+                if (courseMaterials.length > 0) {
+                    content += "<h4>📚 Course Materials</h4><ul class='courseware-list'>";
+                    courseMaterials.forEach(cw => {
+                        content += `<li><strong>${cw.title}</strong> 
+                            <a href="#" onclick="viewCourseware('${cw.id}')">📖 View</a> 
+                            <a href="#" onclick="downloadCourseware('${cw.id}')">⬇️ Download</a>
+                            <p style="font-size:0.9rem; color:#555;">${cw.description || ''}</p>
+                        </li>`;
+                    });
+                    content += "</ul>";
+                } else {
+                    content += "<p><i>No course materials available yet.</i></p>";
+                }
+            } else if (enrolled.status === 'Rejected') {
+                content += "<p style='color:#c0392b;'><strong>Your enrollment was rejected.</strong> Please contact the admin for assistance.</p>";
+            } else {
+                // Pending
+                content += "<p><i>Your enrollment is pending review. Course materials will appear once approved.</i></p>";
+            }
+        }
+        content += "</div>";
+        document.getElementById("studentContent").innerHTML = content;
+    }
+
+    // ---------- PASSPORT UPLOAD ----------
+    function uploadPassport(event) {
+        const file = event.target.files[0];
+        if (!file) return;
+
+        // Check file type
+        if (!file.type.startsWith('image/')) {
+            alert('Please select an image file.');
+            return;
+        }
+
+        // Check file size (max 2MB)
+        if (file.size > 2 * 1024 * 1024) {
+            alert('File size must be less than 2MB.');
+            return;
+        }
+
+        const reader = new FileReader();
+        reader.onload = (e) => {
+            const dataURL = e.target.result;
+
+            // Update current user in localStorage and db
+            let currentUser = JSON.parse(localStorage.getItem("currentUser"));
+            if (!currentUser) return;
+
+            // Update in db.users
+            const userIndex = db.users.findIndex(u => u.username === currentUser.username);
+            if (userIndex !== -1) {
+                db.users[userIndex].passport = dataURL;
+                save();
+
+                // Update currentUser in localStorage
+                currentUser.passport = dataURL;
+                localStorage.setItem("currentUser", JSON.stringify(currentUser));
+
+                // Refresh dashboard
+                showStudentDashboard(currentUser);
+            }
+        };
+        reader.readAsDataURL(file);
+    }
+
+    // SUBMIT ENROLLMENT
+    function submitEnrollment() {
+        let user = JSON.parse(localStorage.getItem("currentUser"));
+        if (!user) { alert("Session expired, login again."); showSection("studentLogin"); return; }
+        let name = document.getElementById("fullName")?.value.trim();
+        let email = document.getElementById("email")?.value.trim();
+        let course = document.getElementById("courseSelect")?.value;
+        if (!name || !email || !course) { alert("Please fill all fields and select a course."); return; }
+        db.enrollments.push({
+            username: user.username,
+            name: name,
+            email: email,
+            course: course,
+            status: "Pending"
+        });
+        save();
+        showStudentDashboard(user);
+    }
+
+    // ---------- ADMIN DASHBOARD (with reject, delete, reset all, and certificate toggle) ----------
+    function showAdminDashboard() {
+        showSection("adminDashboard");
+        // Enrollment table rows
+        let enrollRows = '';
+        db.enrollments.forEach(e => {
+            let gradeObj = db.grades.find(g => g.username === e.username);
+            enrollRows += `<tr>
+                <td>${e.username}</td><td>${e.name}</td><td>${e.course}</td><td>${e.status}</td>
+                <td>
+                    <button class="button small" onclick="approveEnrollment('${e.username}')">✓ Approve</button>
+                    <button class="button small danger" onclick="rejectEnrollment('${e.username}')">✗ Reject</button>
+                </td>
+                <td><input id='grade_${e.username}' value='${gradeObj ? gradeObj.grade : ""}' placeholder='grade' style='width:70px; display:inline; margin:0;'>
+                <button class="button small" onclick="setGrade('${e.username}')">Save</button></td>
+                <td><button class="button small danger" onclick="deleteEnrollment('${e.username}')">🗑️ Delete</button></td>
+            </tr>`;
+        });
+        if (enrollRows === '') enrollRows = '<tr><td colspan="7" style="text-align:center;">No enrollments yet.</td></tr>';
+
+        // Build course management UI
+        let courseItems = '';
+        db.courses.forEach((c, index) => {
+            courseItems += `<div class="course-item">
+                <span><strong>${c}</strong></span>
+                <button class="button small danger" onclick="deleteCourse(${index})">Delete</button>
+            </div>`;
+        });
+        if (courseItems === '') courseItems = '<p>No courses added. Use form below to add.</p>';
+
+        // ----- RESULTS SECTION (all grades with delete and certificate toggle) -----
+        let resultsRows = '';
+        db.grades.forEach(g => {
+            let enrollment = db.enrollments.find(e => e.username === g.username);
+            if (enrollment) {
+                resultsRows += `<tr>
+                    <td>${enrollment.name}</td>
+                    <td>${enrollment.username}</td>
+                    <td>${enrollment.course}</td>
+                    <td><input id='grade_result_${g.username}' value='${g.grade}' class='small-input' placeholder='grade'></td>
+                    <td class="action-cell">
+                        <button class="button small" onclick="updateGradeFromResults('${g.username}')">Update</button>
+                        <button class="button small danger" onclick="deleteGrade('${g.username}')">Delete</button>
+                        ${g.certificateAllowed ? 
+                            `<button class="button small success" onclick="toggleCertificate('${g.username}', false)">✅ Revoke Cert</button>` : 
+                            `<button class="button small secondary" onclick="toggleCertificate('${g.username}', true)">⏳ Allow Cert</button>`}
+                    </td>
+                </tr>`;
+            } else {
+                resultsRows += `<tr>
+                    <td>Unknown</td>
+                    <td>${g.username}</td>
+                    <td>—</td>
+                    <td><input id='grade_result_${g.username}' value='${g.grade}' class='small-input'></td>
+                    <td class="action-cell">
+                        <button class="button small" onclick="updateGradeFromResults('${g.username}')">Update</button>
+                        <button class="button small danger" onclick="deleteGrade('${g.username}')">Delete</button>
+                        ${g.certificateAllowed ? 
+                            `<button class="button small success" onclick="toggleCertificate('${g.username}', false)">✅ Revoke Cert</button>` : 
+                            `<button class="button small secondary" onclick="toggleCertificate('${g.username}', true)">⏳ Allow Cert</button>`}
+                    </td>
+                </tr>`;
+            }
+        });
+        if (resultsRows === '') resultsRows = '<tr><td colspan="5" style="text-align:center;">No grades recorded yet.</td></tr>';
+
+        // ----- STUDENT DIRECTORY (all registered students) with rectangular thumbnails -----
+        let studentRows = '';
+        const students = db.users.filter(u => u.role === 'student');
+        students.forEach(s => {
+            // Find enrollment status if any
+            const enrollment = db.enrollments.find(e => e.username === s.username);
+            const status = enrollment ? enrollment.status : 'Not enrolled';
+            const passportHtml = s.passport ? `<img src="${s.passport}" class="thumbnail" alt="passport">` : 'None';
+            studentRows += `<tr>
+                <td>${s.username}</td>
+                <td>${s.fullName}</td>
+                <td>${s.email}</td>
+                <td>${s.phone || '—'}</td>
+                <td>${passportHtml}</td>
+                <td>${status}</td>
+            </tr>`;
+        });
+        if (studentRows === '') studentRows = '<tr><td colspan="6" style="text-align:center;">No students registered.</td></tr>';
+
+        // ----- COURSEWARE MANAGEMENT -----
+        let coursewareOptions = '';
+        db.courses.forEach(c => coursewareOptions += `<option value="${c}">${c}</option>`);
+
+        let coursewareList = '';
+        db.courseware.forEach((cw, index) => {
+            coursewareList += `<div class="course-item">
+                <span><strong>${cw.course}</strong> — ${cw.title}</span>
+                <button class="button small danger" onclick="deleteCourseware(${index})">Delete</button>
+            </div>`;
+        });
+        if (coursewareList === '') coursewareList = '<p>No course materials added.</p>';
+
+        let adminHtml = `
+            <div class="card">
+                <h3>👩‍🏫 Enrollment Management</h3>
+                <table>
+                    <tr><th>User</th><th>Name</th><th>Course</th><th>Status</th><th>Actions</th><th>Grade</th><th>Delete</th></tr>
+                    ${enrollRows}
+                </table>
+            </div>
+            <div class="card">
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-bottom: 15px;">
+                    <h3>📊 Student Results (all grades) – Certificate control</h3>
+                    <button class="button secondary small" onclick="downloadStudentDetailsCSV()">📥 Download All Student Details (CSV)</button>
+                </div>
+                <table>
+                    <tr><th>Student name</th><th>Username</th><th>Course</th><th>Grade</th><th>Actions (incl. certificate)</th></tr>
+                    ${resultsRows}
+                </table>
+            </div>
+            <div class="card">
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-bottom: 15px;">
+                    <h3>📋 Student Directory (All Registered Students)</h3>
+                    <button class="button small danger" onclick="resetStudentDirectory()">⚠️ Reset All Students</button>
+                </div>
+                <table>
+                    <tr><th>Username</th><th>Full Name</th><th>Email</th><th>Phone</th><th>Passport</th><th>Enrollment Status</th></tr>
+                    ${studentRows}
+                </table>
+            </div>
+            <div class="admin-subsection">
+                <h3>📚 Course Catalog (admin)</h3>
+                <div id="courseList">${courseItems}</div>
+                <hr>
+                <h4>Add New Course</h4>
+                <input id="newCourseName" placeholder="e.g. Generative AI" style="max-width:300px;">
+                <button class="button" onclick="addCourse()">Add Course</button>
+            </div>
+            <div class="admin-subsection">
+                <h3>📁 Courseware Management</h3>
+                <div>${coursewareList}</div>
+                <hr>
+                <h4>Add New Course Material</h4>
+                <select id="cwCourseSelect"><option value="">Select course</option>${coursewareOptions}</select>
+                <input id="cwTitle" placeholder="Title (e.g. Week 1 Lecture Notes)">
+                <textarea id="cwDescription" rows="2" placeholder="Short description (optional)"></textarea>
+                <button class="button" onclick="addCourseware()">Add Material</button>
+            </div>
+        `;
+        document.getElementById("adminContent").innerHTML = adminHtml;
+    }
+
+    // approve enrollment
+    function approveEnrollment(username) {
+        let enrollment = db.enrollments.find(e => e.username === username);
+        if (enrollment) enrollment.status = "Approved";
+        save();
+        showAdminDashboard();
+    }
+
+    // reject enrollment
+    function rejectEnrollment(username) {
+        let enrollment = db.enrollments.find(e => e.username === username);
+        if (enrollment) enrollment.status = "Rejected";
+        save();
+        showAdminDashboard();
+    }
+
+    // delete enrollment and its grade
+    function deleteEnrollment(username) {
+        if (confirm(`Delete enrollment for ${username}? This will also remove any grade.`)) {
+            db.enrollments = db.enrollments.filter(e => e.username !== username);
+            db.grades = db.grades.filter(g => g.username !== username);
+            save();
+            showAdminDashboard();
+        }
+    }
+
+    // set grade from enrollment table (default certificateAllowed = false)
+    function setGrade(username) {
+        let gradeInput = document.getElementById("grade_" + username)?.value;
+        let existing = db.grades.find(g => g.username === username);
+        if (existing) {
+            existing.grade = gradeInput;
+        } else {
+            db.grades.push({ username, grade: gradeInput, certificateAllowed: false });
+        }
+        save();
+        alert("Grade saved. Certificate not allowed by default.");
+        showAdminDashboard();
+    }
+
+    // update grade from results table (keep existing certificateAllowed or default false)
+    function updateGradeFromResults(username) {
+        let gradeInput = document.getElementById("grade_result_" + username)?.value;
+        let existing = db.grades.find(g => g.username === username);
+        if (existing) {
+            existing.grade = gradeInput;
+        } else {
+            db.grades.push({ username, grade: gradeInput, certificateAllowed: false });
+        }
+        save();
+        alert("Grade updated. Certificate setting unchanged.");
+        showAdminDashboard();
+    }
+
+    // Toggle certificate allowed for a grade
+    function toggleCertificate(username, newState) {
+        let grade = db.grades.find(g => g.username === username);
+        if (grade) {
+            grade.certificateAllowed = newState;
+            save();
+            showAdminDashboard();
+        }
+    }
+
+    // ---------- DELETE GRADE (result) ----------
+    function deleteGrade(username) {
+        if (confirm(`Delete grade for ${username}? This action cannot be undone.`)) {
+            db.grades = db.grades.filter(g => g.username !== username);
+            save();
+            showAdminDashboard();
+        }
+    }
+
+    // ---------- RESET ALL STUDENTS (directory) ----------
+    function resetStudentDirectory() {
+        if (!confirm("⚠️ Are you sure? This will permanently delete ALL registered students, their enrollments, and grades. This action cannot be undone.")) return;
+        let studentUsernames = db.users.filter(u => u.role === "student").map(u => u.username);
+        // Remove all students from users
+        db.users = db.users.filter(u => u.role !== "student");
+        // Remove enrollments and grades for those usernames
+        db.enrollments = db.enrollments.filter(e => !studentUsernames.includes(e.username));
+        db.grades = db.grades.filter(g => !studentUsernames.includes(g.username));
+        save();
+        alert("Student directory reset successfully.");
+        showAdminDashboard();
+    }
+
+    // ---------- COURSE MANAGEMENT (admin) ----------
+    function addCourse() {
+        let newCourse = document.getElementById("newCourseName")?.value.trim();
+        if (!newCourse) { alert("Enter course name"); return; }
+        if (db.courses.includes(newCourse)) { alert("Course already exists"); return; }
+        db.courses.push(newCourse);
+        save();
+        showAdminDashboard();
+        renderPublicCourses(); // update public view if visible
+    }
+
+    function deleteCourse(index) {
+        if (confirm("Delete this course? It may affect existing enrollments (course names will remain in enrollments).")) {
+            db.courses.splice(index, 1);
+            save();
+            showAdminDashboard();
+            renderPublicCourses();
+        }
+    }
+
+    // ---------- COURSEWARE MANAGEMENT ----------
+    function addCourseware() {
+        let course = document.getElementById("cwCourseSelect")?.value;
+        let title = document.getElementById("cwTitle")?.value.trim();
+        let description = document.getElementById("cwDescription")?.value.trim();
+        if (!course || !title) { alert("Please select a course and enter a title."); return; }
+        let newItem = {
+            id: Date.now() + Math.random().toString(36).substr(2, 5),
+            course: course,
+            title: title,
+            description: description || '',
+            addedBy: "admin"
+        };
+        db.courseware.push(newItem);
+        save();
+        showAdminDashboard();
+    }
+
+    function deleteCourseware(index) {
+        if (confirm("Delete this course material?")) {
+            db.courseware.splice(index, 1);
+            save();
+            showAdminDashboard();
+        }
+    }
+
+    // ---------- VIEW / DOWNLOAD COURSEWARE (simulated) ----------
+    function viewCourseware(id) {
+        let item = db.courseware.find(cw => cw.id == id);
+        if (!item) return;
+        alert(`Viewing: ${item.title}\nDescription: ${item.description}\n(Simulated – in a real system this would open a PDF or page.)`);
+    }
+
+    function downloadCourseware(id) {
+        let item = db.courseware.find(cw => cw.id == id);
+        if (!item) return;
+        alert(`Download started for: ${item.title}\n(Simulated – in a real system this would download a file.)`);
+    }
+
+    // ---------- EXPORT STUDENT DETAILS (CSV) ----------
+    function downloadStudentDetailsCSV() {
+        // Headers: Username, Full Name, Email, Course, Enrollment Status, Grade, Certificate Allowed
+        let csvRows = [];
+        csvRows.push(['Username', 'Full Name', 'Email', 'Course', 'Enrollment Status', 'Grade', 'Certificate Allowed'].join(','));
+
+        db.enrollments.forEach(enroll => {
+            let gradeObj = db.grades.find(g => g.username === enroll.username);
+            let grade = gradeObj ? gradeObj.grade : '';
+            let certAllowed = gradeObj ? (gradeObj.certificateAllowed ? 'Yes' : 'No') : '';
+            let row = [
+                `"${enroll.username}"`,
+                `"${enroll.name}"`,
+                `"${enroll.email}"`,
+                `"${enroll.course}"`,
+                `"${enroll.status}"`,
+                `"${grade}"`,
+                `"${certAllowed}"`
+            ];
+            csvRows.push(row.join(','));
+        });
+
+        let csvString = csvRows.join('\n');
+        let blob = new Blob([csvString], { type: 'text/csv' });
+        let url = window.URL.createObjectURL(blob);
+        let a = document.createElement('a');
+        a.setAttribute('hidden', '');
+        a.setAttribute('href', url);
+        a.setAttribute('download', 'student_details.csv');
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        window.URL.revokeObjectURL(url);
+    }
+
+    // ---------- CERTIFICATE with rectangular passport photo ----------
+    function generateCertificate(username) {
+        let user = db.enrollments.find(e => e.username === username);
+        let grade = db.grades.find(g => g.username === username);
+        if (!user || !grade) { alert("Incomplete data."); return; }
+        if (!grade.certificateAllowed) { alert("Certificate not yet approved by admin."); return; }
+
+        // Get student's full user record for passport
+        let studentUser = db.users.find(u => u.username === username);
+        let passportHtml = '';
+        if (studentUser && studentUser.passport) {
+            // rectangular image style
+            passportHtml = `<div style="margin-bottom:20px;"><img src="${studentUser.passport}" style="width:120px; height:120px; object-fit:cover; border:4px solid #0a2a43; border-radius:0;"></div>`;
+        } else {
+            passportHtml = `<div style="margin-bottom:20px;"><div style="width:120px; height:120px; background:#ddd; display:inline-flex; align-items:center; justify-content:center; color:#666; border:4px solid #0a2a43; border-radius:0;">No photo</div></div>`;
+        }
+
+        let win = window.open("", "_blank");
+        win.document.write(`
+            <style>
+                body { font-family:Georgia,serif; padding:40px; text-align:center; }
+                .certificate-container { max-width:800px; margin:0 auto; border:2px solid #0a2a43; padding:30px; border-radius:20px; background:#fcf9f0; }
+                h1 { color:#0a2a43; }
+            </style>
+            <div class="certificate-container">
+                <h1>Adequate Success Online College</h1>
+                ${passportHtml}
+                <h2 style="color:#0a2a43;">🎓 Certificate of Completion</h2>
+                <p style="font-size:1.2rem;">This certifies that</p>
+                <h3>${user.name}</h3>
+                <p>has successfully completed the course</p>
+                <h3>${user.course}</h3>
+                <p>with a final grade of <strong>${grade.grade}%</strong></p>
+                <p>Awarded on ${new Date().toLocaleDateString()}</p>
+                <p style="margin-top:40px;"><em>Adequate Success Online College</em></p>
+            </div>
+        `);
+        win.print();
+        win.close();
+    }
+
+    // ---------- SHARE FUNCTION (Web Share API) - now points to signup ----------
+    function shareSite() {
+        // Build URL with hash #signup
+        const shareUrl = window.location.origin + window.location.pathname + '#signup';
+        const shareData = {
+            title: 'Adequate Success Online University – Sign up for free courses!',
+            text: 'Join now to learn AI, Web Design, Excel & more. No tuition fees! Get certified.',
+            url: shareUrl
+        };
+        if (navigator.share) {
+            navigator.share(shareData)
+                .then(() => console.log('Shared successfully'))
+                .catch((error) => console.log('Error sharing:', error));
+        } else {
+            // Fallback: prompt to copy link
+            const textarea = document.createElement('textarea');
+            textarea.value = shareUrl;
+            document.body.appendChild(textarea);
+            textarea.select();
+            try {
+                document.execCommand('copy');
+                alert('Signup link copied to clipboard! Share it with friends.\n\nThe link will open directly on the signup page.');
+            } catch (err) {
+                alert('Your browser does not support sharing. You can copy the URL from the address bar.');
+            }
+            document.body.removeChild(textarea);
+        }
+    }
+
+    // ---------- NETLIFY CONTACT FORM (AJAX submission) ----------
+    const contactForm = document.getElementById('netlifyContact');
+    if (contactForm) {
+        contactForm.addEventListener('submit', async function(e) {
+            e.preventDefault(); // no page reload
+            const formData = new FormData(contactForm);
+            try {
+                const response = await fetch('/', {
+                    method: 'POST',
+                    headers: { 'Accept': 'application/x-www-form-urlencoded' },
+                    body: new URLSearchParams(formData).toString()
+                });
+                if (response.ok) {
+                    document.getElementById('contactSuccess').classList.remove('hidden');
+                    contactForm.reset();
+                } else {
+                    alert('Oops! Something went wrong. Please try again later.');
+                }
+            } catch (error) {
+                alert('Network error – please check your connection.');
+            }
+        });
+    }
+
+    // ---------- LOGOUT ----------
+    function logout() {
+        localStorage.removeItem("currentUser");
+        localStorage.removeItem("currentAdmin");
+        showSection("home");
+    }
+
+    // ---------- AUTO-RESTORE SESSION & HASH ROUTING ----------
+    window.onload = function() {
+        // Check for user session first
+        let currentUser = localStorage.getItem("currentUser");
+        let currentAdmin = localStorage.getItem("currentAdmin");
+        if (currentUser) {
+            try {
+                let u = JSON.parse(currentUser);
+                showStudentDashboard(u);
+                return;
+            } catch { }
+        } else if (currentAdmin) {
+            showAdminDashboard();
+            return;
+        }
+
+        // If no active session, handle hash for direct signup link
+        if (window.location.hash === '#signup') {
+            showSection('signup');
+        } else {
+            // Default to home
+            showSection('home');
+            renderPublicCourses();
+        }
+    };
+</script>
+<!-- 
+    Open Graph image: For the image to appear when sharing, you must upload the flyer image to your server 
+    (e.g., as /og-image.png) and ensure the og:image meta tag points to the correct URL. 
+    The clickable flyer above is an HTML representation that links back to the site.
+    Share button now points to #signup so new users land directly on the signup form.
+    Passport photos are rectangular (border-radius removed).
+    Added password reset feature for students on the login page.
+-->
+</body>
+</html>
