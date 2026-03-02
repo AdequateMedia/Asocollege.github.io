@@ -3,27 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Adequate Success Online College – affordable, faith‑based, accredited online education. Explore courses, tuition, and enroll today.">
-    <!-- Open Graph / Social Media Sharing Meta Tags (using the flyer design) -->
-    <meta property="og:title" content="Adequate Success Online University – Sign up for free courses!" />
-    <meta property="og:description" content="Learn AI, Web Design, Excel & MS PPT. Get certified with flexible schedules. No tuition fees! Join now." />
-    <!-- For actual deployment, replace with your hosted image URL. We use a placeholder that should point to your flyer image. -->
+    <meta name="description" content="TRUE WORSHIPPERS EVANGELICAL MINISTRIES INTERNATIONAL COLLEGE OF DISCIPLESHIP AND EVANGELISM – affordable, faith‑based, accredited online education. Explore discipleship courses, tuition, and enroll today.">
+    <!-- Open Graph / Social Media Sharing Meta Tags -->
+    <meta property="og:title" content="TWEMI COLLEGE OF DISCIPLESHIP AND EVANGELISM – SIGN UP FOR FREE COURSES!" />
+    <meta property="og:description" content="LEARN DISCIPLESHIP, EVANGELISM, BIBLICAL LEADERSHIP & MORE. GET CERTIFIED WITH FLEXIBLE SCHEDULES. NO TUITION FEES! JOIN NOW." />
     <meta property="og:image" content="https://asou-edu.netlify.app/og-image.png" />
     <meta property="og:url" content="https://asou-edu.netlify.app" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta property="og:type" content="website" />
-    <title>Adequate Success Online College</title>
+    <title>TWEMI COLLEGE OF DISCIPLESHIP AND EVANGELISM</title>
     <style>
         * { box-sizing: border-box; margin: 0; }
         body { font-family: 'Segoe UI', Roboto, Arial, sans-serif; background: #f4f6f9; line-height: 1.6; }
         header { background: #0a2a43; color: white; padding: 1rem 2rem; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; }
-        header h1 { font-size: 1.8rem; margin: 0.2rem 0; }
+        header h1 { font-size: 1.5rem; margin: 0.2rem 0; line-height:1.3; text-transform: none; } /* keep header as is */
         nav { display: flex; flex-wrap: wrap; gap: 0.5rem 1.2rem; }
         nav a { color: white; text-decoration: none; font-weight: 600; cursor: pointer; padding: 0.3rem 0; border-bottom: 2px solid transparent; transition: 0.2s; }
         nav a:hover { border-bottom-color: #ff9800; }
+        /* MAIN HEADINGS UPPERCASE (within sections, excluding header/footer) */
+        section h1, section h2, section h3, section h4 { text-transform: uppercase; }
+        /* but keep some exceptions like card titles maybe */
+        section .card h3 { text-transform: uppercase; } /* ensure card titles also uppercase */
         section { display: none; padding: 2.5rem 2rem; max-width: 1200px; margin: 0 auto; }
         .hero { background: linear-gradient(145deg, #0a2a43, #145374); color: white; padding: 4rem 2rem; text-align: center; border-radius: 0 0 20px 20px; margin-bottom: 2rem; }
-        .hero h2 { font-size: 2.8rem; margin-bottom: 1rem; }
+        .hero h2 { font-size: 2.4rem; margin-bottom: 1rem; text-transform: uppercase; }
         .hero p { font-size: 1.3rem; max-width: 700px; margin: 0 auto; }
         .button, button.button { background: #ff9800; color: white; padding: 12px 28px; border: none; border-radius: 50px; font-weight: bold; font-size: 1rem; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.2); transition: 0.2s; margin: 5px 0; border: 1px solid transparent; }
         .button:hover { background: #e68900; transform: scale(1.02); }
@@ -41,9 +44,9 @@
         .grid-2 { grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); }
         .grid-3 { grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); }
         .course-card { background: #f9fcff; padding: 1.8rem; border-radius: 20px; border-left: 8px solid #0a2a43; box-shadow: 0 8px 18px rgba(0,0,0,0.05); }
-        .course-card h3 { color: #0a2a43; margin-bottom: 0.5rem; }
+        .course-card h3 { color: #0a2a43; margin-bottom: 0.5rem; text-transform: uppercase; }
         table { border-collapse: collapse; width: 100%; background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 6px 18px rgba(0,0,0,0.05); }
-        th { background: #0a2a43; color: white; padding: 15px 10px; font-weight: 600; }
+        th { background: #0a2a43; color: white; padding: 15px 10px; font-weight: 600; text-transform: uppercase; }
         td, th { border: none; padding: 14px 12px; text-align: left; border-bottom: 1px solid #e0e6ed; }
         tr:last-child td { border-bottom: none; }
         .badge { background: #ff9800; color: #0a2a43; padding: 5px 15px; border-radius: 40px; font-weight: bold; display: inline-block; margin-top: 10px; }
@@ -66,208 +69,242 @@
         .courseware-list a { text-decoration: none; color: #0a2a43; font-weight: 500; }
         .courseware-list a:hover { text-decoration: underline; }
         .payment-details { background: #e8f0fe; padding: 20px; border-radius: 24px; border: 2px dashed #0a2a43; margin: 25px 0; }
-        .payment-details h3 { color: #0a2a43; margin-top: 0; }
+        .payment-details h3 { color: #0a2a43; margin-top: 0; text-transform: uppercase; }
         .payment-details .account-number { font-size: 2rem; font-weight: bold; color: #c0392b; letter-spacing: 2px; }
-        /* Passport photo styles - RECTANGULAR (no rounding) */
+        /* PASSPORT IMAGE STYLES - RECTANGULAR (border-radius 0) */
         .passport-container { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin-bottom: 20px; }
         .passport-image { width: 120px; height: 120px; object-fit: cover; border: 4px solid #0a2a43; background: #ddd; border-radius: 0; }
         .passport-placeholder { width: 120px; height: 120px; background: #ddd; display: flex; align-items: center; justify-content: center; color: #666; font-size: 0.9rem; border: 4px solid #0a2a43; border-radius: 0; }
         .upload-btn-wrapper { position: relative; overflow: hidden; display: inline-block; }
         .upload-btn-wrapper input[type=file] { position: absolute; left: 0; top: 0; opacity: 0; width: 100%; height: 100%; cursor: pointer; }
-        .thumbnail { width: 50px; height: 50px; object-fit: cover; border: 2px solid #0a2a43; border-radius: 0; }
-        /* Flyer / Promo Card Styles (clickable) */
+        .thumbnail { width: 50px; height: 50px; object-fit: cover; border: 2px solid #0a2a43; border-radius: 0; } /* rectangular */
+        /* Beautiful flyer styles */
         .promo-flyer {
-            background: linear-gradient(145deg, #f9c74f, #f9844a);
-            color: #0a2a43;
-            padding: 2rem;
-            border-radius: 40px;
+            background: linear-gradient(135deg, #1e2b3a, #2c3e50, #0a2a43);
+            color: white;
+            padding: 2.5rem 2rem;
+            border-radius: 50px 50px 50px 50px;
             text-align: center;
-            box-shadow: 0 20px 30px rgba(0,0,0,0.2);
-            border: 4px solid white;
-            max-width: 600px;
+            box-shadow: 0 30px 40px rgba(0,0,0,0.3), 0 0 0 4px #ffb347 inset;
+            max-width: 700px;
             margin: 2rem auto;
-            transition: transform 0.2s;
+            transition: transform 0.3s ease;
+            border: 2px solid gold;
+            position: relative;
+            overflow: hidden;
+        }
+        .promo-flyer::before {
+            content: "✝️";
+            font-size: 6rem;
+            opacity: 0.1;
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            transform: rotate(15deg);
+        }
+        .promo-flyer::after {
+            content: "🕊️";
+            font-size: 5rem;
+            opacity: 0.1;
+            position: absolute;
+            bottom: -20px;
+            left: -20px;
+            transform: rotate(-10deg);
         }
         .promo-flyer:hover {
-            transform: scale(1.02);
-            box-shadow: 0 25px 35px rgba(0,0,0,0.3);
+            transform: scale(1.02) translateY(-5px);
+            box-shadow: 0 35px 45px rgba(0,0,0,0.4), 0 0 0 4px #ffcc80 inset;
         }
         .promo-flyer h2 {
-            font-size: 2.5rem;
+            font-size: 2.6rem;
             font-weight: 900;
-            text-shadow: 2px 2px 0 rgba(255,255,255,0.5);
+            text-shadow: 4px 4px 0 #0a2a43, 6px 6px 0 rgba(255,215,0,0.5);
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+            text-transform: uppercase;
         }
         .promo-flyer .free-badge {
-            background: #0a2a43;
-            color: #ff9800;
-            font-size: 3rem;
+            background: gold;
+            color: #0a2a43;
+            font-size: 2.2rem;
             font-weight: bold;
             padding: 0.5rem 2rem;
             border-radius: 60px;
             display: inline-block;
-            margin: 1rem 0;
+            margin: 1.2rem 0;
+            box-shadow: 0 8px 0 #b8860b;
+            border: 2px solid white;
         }
         .promo-flyer ul {
             list-style: none;
             display: flex;
             justify-content: center;
-            gap: 2rem;
+            gap: 1.2rem;
             flex-wrap: wrap;
             font-weight: bold;
-            margin: 1.5rem 0;
+            margin: 2rem 0;
         }
         .promo-flyer li {
-            background: rgba(255,255,255,0.4);
-            padding: 0.5rem 1.5rem;
+            background: rgba(255,255,255,0.15);
+            padding: 0.7rem 1.8rem;
             border-radius: 40px;
+            font-size: 1.2rem;
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255,255,255,0.4);
         }
         .promo-flyer .call-us {
             font-size: 1.8rem;
-            background: white;
+            background: #ff9800;
             color: #0a2a43;
-            padding: 0.5rem 2rem;
+            padding: 0.7rem 2.5rem;
             border-radius: 50px;
             display: inline-block;
-            margin-top: 1rem;
+            margin-top: 1.2rem;
+            font-weight: bold;
+            box-shadow: 0 6px 0 #b85c00;
+            border: 2px solid white;
         }
         .promo-flyer a {
             text-decoration: none;
             color: inherit;
             display: block;
         }
-        /* Reset password form */
-        #resetPasswordForm {
-            margin-top: 20px;
-            padding: 15px;
-            background: #f0f4fa;
-            border-radius: 20px;
+        .flyer-footer {
+            margin-top: 1.5rem;
+            font-size: 1.1rem;
+            background: rgba(0,0,0,0.3);
+            padding: 0.8rem;
+            border-radius: 40px;
+            border: 1px solid gold;
         }
-        @media (max-width: 700px) { header { flex-direction: column; } nav { justify-content: center; margin-top: 0.8rem; } }
+        @media (max-width: 700px) { header { flex-direction: column; } nav { justify-content: center; margin-top: 0.8rem; } header h1 { font-size:1.3rem; } }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Adequate Success Online College</h1>
+    <h1>TWEMI COLLEGE OF DISCIPLESHIP AND EVANGELISM</h1>
     <nav>
-        <a onclick="showSection('home')">Home</a>
-        <a onclick="showSection('about')">About</a>
-        <a onclick="showSection('courses')">Courses</a>
-        <a onclick="showSection('tuition')">Tuition</a>
-        <a onclick="showSection('contact')">Contact</a>
-        <a onclick="showSection('signup')">Sign Up</a>
-        <a onclick="showSection('studentLogin')">Student Login</a>
-        <a onclick="showSection('adminLogin')">Admin Login</a>
-        <a onclick="shareSite()">📤 Share Signup</a>
+        <a onclick="showSection('home')">HOME</a>
+        <a onclick="showSection('about')">ABOUT</a>
+        <a onclick="showSection('courses')">COURSES</a>
+        <a onclick="showSection('tuition')">TUITION</a>
+        <a onclick="showSection('contact')">CONTACT</a>
+        <a onclick="showSection('signup')">SIGN UP</a>
+        <a onclick="showSection('studentLogin')">STUDENT LOGIN</a>
+        <a onclick="showSection('adminLogin')">ADMIN LOGIN</a>
+        <a onclick="shareSite()">📤 SHARE</a>
     </nav>
 </header>
 
 <!-- ========== PUBLIC INFO SECTIONS ========== -->
 <section id="home" style="display:block;">
     <div class="hero">
-        <h2>Empowering Lives Through Faith & Education</h2>
-        <p>Accredited online programs · Flexible schedules · Rooted in values</p>
-        <button class="button" onclick="showSection('courses')" style="margin-top:25px;">Explore Programs</button>
+        <h2>TRUE WORSHIPPERS EVANGELICAL MINISTRIES INTERNATIONAL COLLEGE OF DISCIPLESHIP AND EVANGELISM</h2>
+        <p>ACCREDITED ONLINE PROGRAMS · FLEXIBLE SCHEDULES · ROOTED IN FAITH & VALUES</p>
+        <button class="button" onclick="showSection('courses')" style="margin-top:25px;">EXPLORE PROGRAMS</button>
     </div>
 
-    <!-- ===== CLICKABLE PROMO FLYER ===== -->
+    <!-- ===== BEAUTIFUL NEW FLYER ===== -->
     <a href="https://asou-edu.netlify.app" target="_blank" style="text-decoration: none;">
         <div class="promo-flyer">
-            <h2>ADEQUATESUCCESS<br>ONLINE UNIVERSITY</h2>
-            <p style="font-size:1.5rem;">LEARN & GROW YOUR FUTURE!</p>
+            <h2>✝️ TWEMI<br>COLLEGE OF DISCIPLESHIP AND EVANGELISM</h2>
+            <p style="font-size:1.8rem; font-weight:300;">EQUIPPING THE SAINTS, FULFILLING THE GREAT COMMISSION</p>
             <div class="free-badge">100% TUITION FREE!</div>
-            <p style="font-size:1.2rem;">www.asou-edu.netlify.app</p>
-            <p style="font-size:1.3rem; font-weight:bold;">Acquire In-Demand Skills Online!</p>
+            <p style="font-size:1.3rem;">FOUNDERS: APOSTLE D.S.A SOLOMON & REV. MRS. D.F.A. SOLOMON</p>
+            <p style="font-size:1.2rem; margin-top:0.5rem;">VICE CHANCELLOR: PROPHET ADESHINA O.</p>
             <ul>
-                <li>LEARN AI</li>
-                <li>WEB DESIGN</li>
-                <li>EXCEL & MS PPT</li>
-                <li>PAY HOSTING & DOMAIN</li>
+                <li>DISCIPLESHIP</li>
+                <li>EVANGELISM</li>
+                <li>BIBLICAL LEADERSHIP</li>
+                <li>PASTORAL CARE</li>
+                <li>MISSIONS</li>
             </ul>
             <div class="call-us">CALL: 09075614558</div>
-            <p style="margin-top:1.5rem;">No Tuition Fees! Learn Anytime, Anywhere!</p>
-            <p style="font-size:1.2rem;">- CERTIFICATE COURSES - FLEXIBLE SCHEDULE - GLOBAL LEARNING</p>
+            <div class="flyer-footer">
+                🌍 LEARN ANYTIME, ANYWHERE · CERTIFICATE COURSES · FLEXIBLE SCHEDULE
+            </div>
         </div>
     </a>
 
     <div class="grid-2" style="margin-top:2rem;">
-        <div class="card"><h3>🎓 Why Choose Us?</h3><p>Since 2010, we’ve helped over 5,000 students achieve their goals with affordable, Christ‑centered online education. Small classes, dedicated mentors.</p></div>
-        <div class="card"><h3>⏳ Flexible Learning</h3><p>100% online, self‑paced courses with weekly live sessions. Balance work, family, and studies.</p></div>
-        <div class="card"><h3>📜 Accreditation</h3><p>Recognized by the Distance Education Accrediting Commission (DEAC). Transfer credits accepted.</p></div>
-        <div class="card"><h3>🙏 Faith Integration</h3><p>All programs include optional courses in ethics, leadership, and service learning.</p></div>
+        <div class="card"><h3>🎓 WHY CHOOSE US?</h3><p>Since 2010, we’ve helped over 5,000 students achieve their goals with affordable, Christ‑centered online education. Small classes, dedicated mentors.</p></div>
+        <div class="card"><h3>⏳ FLEXIBLE LEARNING</h3><p>100% online, self‑paced courses with weekly live sessions. Balance work, family, and studies.</p></div>
+        <div class="card"><h3>📜 ACCREDITATION</h3><p>Recognized by the Distance Education Accrediting Commission (DEAC). Transfer credits accepted.</p></div>
+        <div class="card"><h3>🙏 FAITH INTEGRATION</h3><p>All programs include courses in discipleship, ethics, leadership, and service learning.</p></div>
     </div>
 </section>
 
 <section id="about">
-    <h2>About Adequate Success</h2>
+    <h2>ABOUT TWEMI COLLEGE OF DISCIPLESHIP AND EVANGELISM</h2>
     <div class="card">
-        <p style="font-size:1.2rem;">Founded in 2010, Adequate Success Online College exists to provide accessible, values‑driven higher education to students from all walks of life. We blend academic rigor with spiritual growth, preparing graduates for both career and purpose.</p>
+        <p style="font-size:1.2rem;">Founded in 2010, True Worshipers Evangelical Ministries International College of Discipleship and Evangelism exists to provide accessible, values‑driven higher education to students from all walks of life. We blend academic rigor with spiritual growth, preparing graduates for both career and purpose.</p>
         <hr>
-        <h3>Mission & Vision</h3>
-        <p><strong>Mission:</strong> To equip learners with skills, integrity, and hope through flexible online programs rooted in excellence and faith.</p>
-        <p><strong>Vision:</strong> A world where quality education is within everyone's reach, fostering community and transformation.</p>
+        <h3>OUR ENHANCED MISSION</h3>
+        <p><strong>MISSION:</strong> To equip and empower believers worldwide through biblically grounded education, fostering deep discipleship, passionate evangelism, and transformative leadership. We are committed to raising a generation of servant-leaders who will impact their communities and the nations with the gospel of Jesus Christ, demonstrating excellence, integrity, and compassion in every sphere of life.</p>
+        
+        <h3>OUR ENHANCED VISION</h3>
+        <p><strong>VISION:</strong> To be a premier global center for discipleship and evangelism training, producing graduates who are spiritually mature, theologically sound, and practically skilled to advance God's kingdom. We envision a movement of believers equipped to make disciples of all nations, bringing revival and reformation through the power of the Holy Spirit, and establishing centers of faith that transform societies.</p>
         <hr>
-        <h3>Our Management Team</h3>
+        <h3>OUR MANAGEMENT TEAM</h3>
         <div class="grid-3">
-            <div><strong>Solomon Daniel</strong> — Vice Chancellor (VC)</div>
-            <div><strong>Deborah Solomon</strong> — Director of Dean</div>
-            <div><strong>Adebowale Segun</strong> — Dean of Faculty</div>
-            <div><strong>Adebowale Daniel</strong> — Admin</div>
-            <div><strong>Funmilayo Adebowale</strong> — Registrar</div>
+            <div><strong>APOSTLE D.S.A. SOLOMON</strong> — FOUNDER & PRESIDENT</div>
+            <div><strong>REVEREND MRS. D.F.A. SOLOMON</strong> — FOUNDER & DEAN OF STUDENTS</div>
+            <div><strong>PROPHET ADESHINA O.</strong> — VICE CHANCELLOR</div>
         </div>
+        <p style="margin-top:1rem;"><em>“REDUCED MANAGEMENT AS PER INSTRUCTION: APOSTLE D.S.A SOLOMON, REV. MRS D.F.A SOLOMON (FOUNDERS), PROPHET ADESHINA O. (VICE CHANCELLOR).”</em></p>
     </div>
 </section>
 
 <section id="courses">
-    <h2>Undergraduate & Graduate Programs</h2>
+    <h2>DISCIPLESHIP & EVANGELISM PROGRAMS</h2>
     <div class="grid-3" id="publicCoursesContainer">
-        <!-- dynamically populated from db.courses later -->
+        <!-- dynamically populated from db.courses (approved only) -->
     </div>
 </section>
 
 <!-- ========== TUITION with OPAY PAYMENT DETAILS ========== -->
 <section id="tuition">
-    <h2>100% free online Program</h2>
+    <h2>100% FREE ONLINE PROGRAMS</h2>
     <div class="card">
         <table>
-            <tr><th>Program</th><th>Cost per credit</th><th>Estimated total</th></tr>
+            <tr><th>PROGRAM</th><th>COST PER CREDIT</th><th>ESTIMATED TOTAL</th></tr>
             <tr><td>Associate / Bachelor's</td><td>$0</td><td>$0 (BA, 120cr)</td></tr>
-            <tr><td>Master's programs</td><td>$0</td><td>$0(MA, 36cr)</td></tr>
+            <tr><td>Master's programs</td><td>$0</td><td>$0 (MA, 36cr)</td></tr>
             <tr><td>Certificates</td><td>$0</td><td>$0 (18cr)</td></tr>
             <tr><td colspan="3"><small>* Textbook fees ~$5/course. Military & ministry discounts available.</small></td></tr>
         </table>
         <p style="margin-top:30px;">📌 80% of students receive grants or scholarships. FAFSA code: 012345. Monthly payment plans.</p>
-        <button class="button" onclick="showSection('contact')">Ask about financial aid</button>
+        <button class="button" onclick="showSection('contact')">ASK ABOUT FINANCIAL AID</button>
     </div>
 
-    <!-- OPAY PAYMENT ACCOUNT (NIGERIA) with account name -->
+    <!-- OPAY PAYMENT ACCOUNT (NIGERIA) -->
     <div class="payment-details">
-        <h3>💳 Make Payment via Opay</h3>
+        <h3>💳 MAKE PAYMENT VIA OPAY</h3>
         <p>Send your tuition or fees directly to our official Opay account:</p>
         <div style="background: white; padding: 20px; border-radius: 20px; text-align: center;">
-            <p style="font-size: 1.2rem; margin-bottom: 5px;">Opay Account Number</p>
+            <p style="font-size: 1.2rem; margin-bottom: 5px;">OPAY ACCOUNT NUMBER</p>
             <div class="account-number">8034212065</div>
-            <p style="margin-top: 10px;"><strong>Account Name:</strong> Adrbowale Segun Solomon</p>
-            <p><strong>Bank:</strong> Opay Digital Services</p>
+            <p style="margin-top: 10px;"><strong>ACCOUNT NAME:</strong> ADRBOWALE SEGUN SOLOMON</p>
+            <p><strong>BANK:</strong> OPAY DIGITAL SERVICES</p>
         </div>
-        <p style="margin-top: 15px;">After payment, please email your receipt to <strong>finance@adequatesuccess.edu@gmail.com</strong> with your full name and student ID (if available).</p>
+        <p style="margin-top: 15px;">After payment, please email your receipt to <strong>finance@twemi-college.org</strong> with your full name and student ID (if available).</p>
     </div>
 </section>
 
 <!-- ========== CONTACT with NETLIFY FORM ========== -->
 <section id="contact">
-    <h2>Get in Touch</h2>
+    <h2>GET IN TOUCH</h2>
     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
         <div class="card">
-            <h3>📬 Contact info</h3>
+            <h3>📬 CONTACT INFO</h3>
             <p>📍 1221 Success Blvd, Suite 200<br>   Orlando, FL 32801</p>
-          <p>📞 (234) 9075614458 (Mon–Fri, 9am–7pm ET)</p>
-            <p>📧 admissions@adeqsuccess.edu</p>
-            <p>🌐 social: @AdequateSuccess (LinkedIn, Twitter)</p>
+            <p>📞 (234) 9075614458 (Mon–Fri, 9am–7pm ET)</p>
+            <p>📧 admissions@twemi-college.org</p>
+            <p>🌐 social: @TWEMICollege (LinkedIn, Twitter)</p>
         </div>
         <div class="card">
-            <h3>✉️ Send us a message</h3>
-            <!-- Netlify form: detected automatically, submitted via AJAX -->
+            <h3>✉️ SEND US A MESSAGE</h3>
             <form id="netlifyContact" data-netlify="true" netlify-honeypot="bot-field" name="contact" method="POST">
                 <input type="hidden" name="form-name" value="contact" />
                 <p class="hidden">
@@ -276,68 +313,56 @@
                 <input type="text" name="name" id="contactName" placeholder="Your name" required />
                 <input type="email" name="email" id="contactEmail" placeholder="Email address" required />
                 <textarea name="message" id="contactMsg" rows="4" placeholder="Your question / message" required style="border-radius:20px;"></textarea>
-                <button type="submit" class="button" id="contactSubmit">Send Message</button>
+                <button type="submit" class="button" id="contactSubmit">SEND MESSAGE</button>
             </form>
-            <div id="contactSuccess" class="hidden">✅ Thank you! We’ll reply within 2 business days.</div>
+            <div id="contactSuccess" class="hidden">✅ THANK YOU! WE’LL REPLY WITHIN 2 BUSINESS DAYS.</div>
         </div>
     </div>
 </section>
 
 <!-- ========== AUTH & DASHBOARDS ========== -->
 <section id="signup">
-    <h2>Student Sign Up (Full Details)</h2>
+    <h2>STUDENT SIGN UP (FULL DETAILS)</h2>
     <input id="suFullName" placeholder="Full Name" required>
     <input id="suEmail" type="email" placeholder="Email Address" required>
     <input id="suPhone" placeholder="Phone Number (optional)">
     <input id="suUser" placeholder="Username" required>
     <input id="suPass" type="password" placeholder="Password" required>
-    <button class="button" onclick="signup()">Create Account</button>
+    <button class="button" onclick="signup()">CREATE ACCOUNT</button>
     <p id="suMsg" class="message"></p>
 </section>
 
 <section id="studentLogin">
-    <h2>Student Login</h2>
+    <h2>STUDENT LOGIN</h2>
     <input id="stuUser" placeholder="Username">
     <input id="stuPass" type="password" placeholder="Password">
-    <button class="button" onclick="loginStudent()">Login</button>
+    <button class="button" onclick="loginStudent()">LOGIN</button>
     <p id="stuMsg" class="message"></p>
-    <!-- Forgot password link -->
-    <p><a href="#" onclick="toggleResetForm()">Forgot password?</a></p>
-    <!-- Hidden reset password form -->
-    <div id="resetPasswordForm" style="display: none;">
-        <h3>Reset Password</h3>
-        <input id="resetUser" placeholder="Username" required>
-        <input id="resetNewPass" type="password" placeholder="New Password" required>
-        <input id="resetConfirmPass" type="password" placeholder="Confirm New Password" required>
-        <button class="button small" onclick="resetPassword()">Reset Password</button>
-        <button class="button small secondary" onclick="toggleResetForm()">Cancel</button>
-        <p id="resetMsg" class="message"></p>
-    </div>
 </section>
 
 <section id="adminLogin">
-    <h2>Admin Login</h2>
+    <h2>ADMIN LOGIN</h2>
     <input id="adUser" placeholder="Admin Username">
     <input id="adPass" type="password" placeholder="Password">
-    <button class="button" onclick="loginAdmin()">Login</button>
+    <button class="button" onclick="loginAdmin()">LOGIN</button>
     <p id="adMsg" class="message"></p>
 </section>
 
 <section id="studentDashboard">
-    <h2>Student Dashboard</h2>
+    <h2>STUDENT DASHBOARD</h2>
     <div id="studentContent"></div>
-    <button class="button" onclick="logout()">Logout</button>
+    <button class="button" onclick="logout()">LOGOUT</button>
 </section>
 
 <section id="adminDashboard">
-    <h2>Admin Portal</h2>
+    <h2>ADMIN PORTAL</h2>
     <div id="adminContent"></div>
-    <button class="button" onclick="logout()">Logout</button>
+    <button class="button" onclick="logout()">LOGOUT</button>
 </section>
 
 <footer>
-    <p>© 2026 Adequate Success Online College — Accredited by DEAC | All faiths welcome</p>
-    <p><a href="#" onclick="showSection('about')">About</a> | <a href="#" onclick="showSection('contact')">Contact</a> | <a href="#">Privacy</a></p>
+    <p>© 2026 TRUE WORSHIPPERS EVANGELICAL MINISTRIES INTERNATIONAL COLLEGE OF DISCIPLESHIP AND EVANGELISM — ACCREDITED BY DEAC | ALL FAITHS WELCOME</p>
+    <p><a href="#" onclick="showSection('about')">ABOUT</a> | <a href="#" onclick="showSection('contact')">CONTACT</a> | <a href="#">PRIVACY</a></p>
     <div class="social-links">🔵 🐦 📘</div>
 </footer>
 
@@ -347,23 +372,30 @@
         users: JSON.parse(localStorage.getItem("users")) || [{ username: "admin", password: "admin123", role: "admin" }],
         enrollments: JSON.parse(localStorage.getItem("enrollments")) || [],
         grades: JSON.parse(localStorage.getItem("grades")) || [],   // each grade: { username, grade, certificateAllowed (boolean) }
-        // Updated courses: AI, Excel, MS, Web Design
+        // courses are now objects: { name, approved } 
         courses: JSON.parse(localStorage.getItem("courses")) || [
-            "Introduction to Artificial Intelligence",
-            "Machine Learning Fundamentals",
-            "Deep Learning & Neural Networks",
-            "AI for Business",
-            "Microsoft Excel (Basic to Advanced)",
-            "Microsoft Office Suite",
-            "Web Design (HTML, CSS, JavaScript)",
-            "Advanced Web Development",
-            "Data Science with Python",
-            "Natural Language Processing"
-        ],
+            "FOUNDATIONS OF DISCIPLESHIP",
+            "EVANGELISM AND CHURCH GROWTH",
+            "BIBLICAL LEADERSHIP",
+            "WORSHIP AND PRAYER",
+            "MISSIONS AND OUTREACH",
+            "NEW TESTAMENT SURVEY",
+            "OLD TESTAMENT FOUNDATIONS",
+            "HOMILETICS (PREACHING)",
+            "CHRISTIAN ETHICS",
+            "PASTORAL CARE AND COUNSELING",
+            "SPIRITUAL FORMATION",
+            "INTRODUCTION TO THEOLOGY"
+        ].map(name => ({ name, approved: true })), // migrate old strings to approved objects
         courseware: JSON.parse(localStorage.getItem("courseware")) || []  // each item: { id, course, title, description, addedBy }
     };
 
-    // Migrate old users to have fullName, email, phone, passport if missing
+    // Ensure courses are objects (in case localStorage had strings from older version)
+    if (db.courses.length > 0 && typeof db.courses[0] === 'string') {
+        db.courses = db.courses.map(name => ({ name, approved: true }));
+    }
+
+    // Migrate users to have fullName, email, phone, passport if missing
     db.users = db.users.map(u => {
         if (!u.fullName) u.fullName = '';
         if (!u.email) u.email = '';
@@ -391,7 +423,7 @@
         document.querySelectorAll("section").forEach(s => s.style.display = "none");
         document.getElementById(id).style.display = "block";
         // Clear previous messages
-        ["suMsg","stuMsg","adMsg","resetMsg"].forEach(m => { if(document.getElementById(m)) document.getElementById(m).innerText = ""; });
+        ["suMsg","stuMsg","adMsg"].forEach(m => { if(document.getElementById(m)) document.getElementById(m).innerText = ""; });
         // if public courses section, refresh dynamic listing
         if (id === 'courses') renderPublicCourses();
         // hide contact success message when leaving contact
@@ -399,70 +431,19 @@
             let successDiv = document.getElementById('contactSuccess');
             if (successDiv) successDiv.classList.add('hidden');
         }
-        // Hide reset form when leaving studentLogin
-        if (id !== 'studentLogin') {
-            let resetDiv = document.getElementById('resetPasswordForm');
-            if (resetDiv) resetDiv.style.display = 'none';
-        }
-        // Update hash to reflect section (optional)
         window.location.hash = id;
     }
 
-    // Toggle reset password form
-    function toggleResetForm() {
-        let form = document.getElementById('resetPasswordForm');
-        if (form.style.display === 'none' || form.style.display === '') {
-            form.style.display = 'block';
-            document.getElementById('resetMsg').innerText = '';
-        } else {
-            form.style.display = 'none';
-        }
-    }
-
-    // Reset password function
-    function resetPassword() {
-        let username = document.getElementById('resetUser').value.trim();
-        let newPass = document.getElementById('resetNewPass').value;
-        let confirmPass = document.getElementById('resetConfirmPass').value;
-        let msg = document.getElementById('resetMsg');
-
-        if (!username || !newPass || !confirmPass) {
-            msg.innerText = 'Please fill all fields.';
-            return;
-        }
-        if (newPass !== confirmPass) {
-            msg.innerText = 'Passwords do not match.';
-            return;
-        }
-        let user = db.users.find(u => u.username === username && u.role === 'student');
-        if (!user) {
-            msg.innerText = 'Username not found.';
-            return;
-        }
-        // Update password
-        user.password = newPass;
-        save();
-        msg.style.color = 'green';
-        msg.innerText = 'Password reset successfully! You can now log in.';
-        // Clear fields
-        document.getElementById('resetUser').value = '';
-        document.getElementById('resetNewPass').value = '';
-        document.getElementById('resetConfirmPass').value = '';
-        // Hide form after 2 seconds
-        setTimeout(() => {
-            toggleResetForm();
-        }, 2000);
-    }
-
-    // display courses from db on public page
+    // display approved courses from db on public page
     function renderPublicCourses() {
         let container = document.getElementById("publicCoursesContainer");
         if (!container) return;
+        let approvedCourses = db.courses.filter(c => c.approved);
         let html = '';
-        db.courses.forEach(course => {
-            html += `<div class="course-card"><h3>📘 ${course}</h3><p>Comprehensive online program. Click to view details.</p><span class="badge">available</span></div>`;
+        approvedCourses.forEach(course => {
+            html += `<div class="course-card"><h3>📘 ${course.name}</h3><p>DEEPEN YOUR FAITH AND MINISTRY SKILLS.</p><span class="badge">AVAILABLE</span></div>`;
         });
-        if (html === '') html = '<p>No courses listed yet. Check back soon.</p>';
+        if (html === '') html = '<p>NO APPROVED COURSES YET. CHECK BACK SOON.</p>';
         container.innerHTML = html;
     }
 
@@ -476,18 +457,17 @@
         let msg = document.getElementById("suMsg");
 
         if (!fullName || !email || !user || !pass) {
-            msg.innerText = "Please fill all required fields (Name, Email, Username, Password).";
+            msg.innerText = "PLEASE FILL ALL REQUIRED FIELDS (NAME, EMAIL, USERNAME, PASSWORD).";
             return;
         }
         if (!/^\S+@\S+\.\S+$/.test(email)) {
-            msg.innerText = "Enter a valid email address.";
+            msg.innerText = "ENTER A VALID EMAIL ADDRESS.";
             return;
         }
         if (db.users.find(u => u.username === user)) {
-            msg.innerText = "Username already exists.";
+            msg.innerText = "USERNAME ALREADY EXISTS.";
             return;
         }
-        // optional: check email uniqueness? we can skip.
 
         db.users.push({
             username: user,
@@ -500,8 +480,7 @@
         });
         save();
         msg.style.color = "green";
-        msg.innerText = "Account created! You can now log in.";
-        // clear form
+        msg.innerText = "ACCOUNT CREATED! YOU CAN NOW LOG IN.";
         document.getElementById("suFullName").value = "";
         document.getElementById("suEmail").value = "";
         document.getElementById("suPhone").value = "";
@@ -518,7 +497,7 @@
             localStorage.setItem("currentUser", JSON.stringify(found));
             showStudentDashboard(found);
         } else {
-            document.getElementById("stuMsg").innerText = "Invalid login";
+            document.getElementById("stuMsg").innerText = "INVALID LOGIN";
         }
     }
 
@@ -530,11 +509,11 @@
             localStorage.setItem("currentAdmin", JSON.stringify(admin));
             showAdminDashboard();
         } else {
-            document.getElementById("adMsg").innerText = "Invalid admin login";
+            document.getElementById("adMsg").innerText = "INVALID ADMIN LOGIN";
         }
     }
 
-    // ---------- STUDENT DASHBOARD (with rectangular passport) ----------
+    // ---------- STUDENT DASHBOARD (with passport upload and display) ----------
     function showStudentDashboard(user) {
         showSection("studentDashboard");
         let enrolled = db.enrollments.find(e => e.username === user.username);
@@ -543,121 +522,109 @@
         // ----- Passport section (rectangular) -----
         content += "<div class='passport-container'>";
         if (user.passport) {
-            content += `<img src="${user.passport}" alt="Passport" class="passport-image">`;
+            content += `<img src="${user.passport}" alt="PASSPORT" class="passport-image">`;
         } else {
-            content += `<div class="passport-placeholder">No Photo</div>`;
+            content += `<div class="passport-placeholder">NO PHOTO</div>`;
         }
         content += `<div>
-            <h3>Welcome, ${user.fullName} (${user.username}) ✨</h3>`;
-        if (user.phone) content += `<p><b>Phone:</b> ${user.phone}</p>`;
-        content += `<p><b>Email:</b> ${user.email}</p>`;
+            <h3>WELCOME, ${user.fullName} (${user.username}) ✨</h3>`;
+        if (user.phone) content += `<p><b>PHONE:</b> ${user.phone}</p>`;
+        content += `<p><b>EMAIL:</b> ${user.email}</p>`;
         content += `<div class="upload-btn-wrapper">
-                <button class="button small">Upload Passport</button>
+                <button class="button small">UPLOAD PASSPORT</button>
                 <input type="file" accept="image/*" onchange="uploadPassport(event)">
             </div>
         </div></div>`;
 
         // ----- Enrollment / Courseware section -----
         if (!enrolled) {
-            // Build dropdown from updated courses
-            let options = '<option value="">-- Select a course --</option>';
-            db.courses.forEach(c => options += `<option value="${c}">${c}</option>`);
-            // Pre-fill name and email from user profile
-            content += `<h4>📝 Enrollment Form</h4>
-                <input id='fullName' placeholder='Full Legal Name' value='${user.fullName}' required><br>
-                <input id='email' placeholder='Email Address' value='${user.email}' required><br>
-                <label>Choose program:</label><br>
+            // only show approved courses in dropdown
+            let approvedCourses = db.courses.filter(c => c.approved);
+            let options = '<option value="">-- SELECT A COURSE --</option>';
+            approvedCourses.forEach(c => options += `<option value="${c.name}">${c.name}</option>`);
+            content += `<h4>📝 ENROLLMENT FORM</h4>
+                <input id='fullName' placeholder='FULL LEGAL NAME' value='${user.fullName}' required><br>
+                <input id='email' placeholder='EMAIL ADDRESS' value='${user.email}' required><br>
+                <label>CHOOSE PROGRAM:</label><br>
                 <select id='courseSelect'>${options}</select><br>
-                <button class='button' onclick='submitEnrollment()'>Submit Enrollment</button>`;
+                <button class='button' onclick='submitEnrollment()'>SUBMIT ENROLLMENT</button>`;
         } else {
             let statusColor = enrolled.status === 'Approved' ? 'green' : (enrolled.status === 'Rejected' ? '#c0392b' : '#b85c00');
-            content += `<p><b>Enrollment status:</b> <span style="color:${statusColor};">${enrolled.status}</span></p>
-                <p><b>Course:</b> ${enrolled.course}</p>`;
+            content += `<p><b>ENROLLMENT STATUS:</b> <span style="color:${statusColor};">${enrolled.status.toUpperCase()}</span></p>
+                <p><b>COURSE:</b> ${enrolled.course}</p>`;
 
             if (enrolled.status === 'Approved') {
                 let grade = db.grades.find(g => g.username === user.username);
                 if (grade) {
-                    content += `<p><b>Final grade:</b> ${grade.grade} / 100</p>`;
-                    // Only show certificate button if admin has allowed it
+                    content += `<p><b>FINAL GRADE:</b> ${grade.grade} / 100</p>`;
                     if (grade.certificateAllowed) {
-                        content += `<button class='button' onclick='generateCertificate("${user.username}")'>📄 Download Certificate (with passport)</button>`;
+                        content += `<button class='button' onclick='generateCertificate("${user.username}")'>📄 DOWNLOAD CERTIFICATE (WITH PASSPORT)</button>`;
                     } else {
-                        content += `<p><i>Certificate not yet approved by admin.</i></p>`;
+                        content += `<p><i>CERTIFICATE NOT YET APPROVED BY ADMIN.</i></p>`;
                     }
                 } else {
-                    content += "<p><i>Grades will appear here once approved by admin.</i></p>";
+                    content += "<p><i>GRADES WILL APPEAR HERE ONCE APPROVED BY ADMIN.</i></p>";
                 }
 
-                // ----- Courseware for approved students only -----
                 content += `<div class="payment-details" style="margin-top:15px;">
-                    <h4>💳 Tuition Payment</h4>
-                    <p>If you haven't paid yet, please use our Opay account:</p>
+                    <h4>💳 TUITION PAYMENT</h4>
+                    <p>IF YOU HAVEN'T PAID YET, PLEASE USE OUR OPAY ACCOUNT:</p>
                     <p class="account-number" style="font-size:1.5rem;">8034212065</p>
-                    <p><strong>Account Name:</strong> Adrbowale Segun Solomon</p>
-                    <p>Email receipt to finance@adeqsuccess.edu</p>
+                    <p><strong>ACCOUNT NAME:</strong> ADRBOWALE SEGUN SOLOMON</p>
+                    <p>EMAIL RECEIPT TO finance@twemi-college.org</p>
                 </div>`;
 
                 let courseMaterials = db.courseware.filter(cw => cw.course === enrolled.course);
                 if (courseMaterials.length > 0) {
-                    content += "<h4>📚 Course Materials</h4><ul class='courseware-list'>";
+                    content += "<h4>📚 COURSE MATERIALS</h4><ul class='courseware-list'>";
                     courseMaterials.forEach(cw => {
                         content += `<li><strong>${cw.title}</strong> 
-                            <a href="#" onclick="viewCourseware('${cw.id}')">📖 View</a> 
-                            <a href="#" onclick="downloadCourseware('${cw.id}')">⬇️ Download</a>
+                            <a href="#" onclick="viewCourseware('${cw.id}')">📖 VIEW</a> 
+                            <a href="#" onclick="downloadCourseware('${cw.id}')">⬇️ DOWNLOAD</a>
                             <p style="font-size:0.9rem; color:#555;">${cw.description || ''}</p>
                         </li>`;
                     });
                     content += "</ul>";
                 } else {
-                    content += "<p><i>No course materials available yet.</i></p>";
+                    content += "<p><i>NO COURSE MATERIALS AVAILABLE YET.</i></p>";
                 }
             } else if (enrolled.status === 'Rejected') {
-                content += "<p style='color:#c0392b;'><strong>Your enrollment was rejected.</strong> Please contact the admin for assistance.</p>";
+                content += "<p style='color:#c0392b;'><strong>YOUR ENROLLMENT WAS REJECTED.</strong> PLEASE CONTACT THE ADMIN FOR ASSISTANCE.</p>";
             } else {
-                // Pending
-                content += "<p><i>Your enrollment is pending review. Course materials will appear once approved.</i></p>";
+                content += "<p><i>YOUR ENROLLMENT IS PENDING REVIEW. COURSE MATERIALS WILL APPEAR ONCE APPROVED.</i></p>";
             }
         }
         content += "</div>";
         document.getElementById("studentContent").innerHTML = content;
     }
 
-    // ---------- PASSPORT UPLOAD ----------
+    // ---------- PASSPORT UPLOAD (rectangular) ----------
     function uploadPassport(event) {
         const file = event.target.files[0];
         if (!file) return;
-
-        // Check file type
         if (!file.type.startsWith('image/')) {
-            alert('Please select an image file.');
+            alert('PLEASE SELECT AN IMAGE FILE.');
             return;
         }
-
-        // Check file size (max 2MB)
         if (file.size > 2 * 1024 * 1024) {
-            alert('File size must be less than 2MB.');
+            alert('FILE SIZE MUST BE LESS THAN 2MB.');
             return;
         }
 
         const reader = new FileReader();
         reader.onload = (e) => {
             const dataURL = e.target.result;
-
-            // Update current user in localStorage and db
             let currentUser = JSON.parse(localStorage.getItem("currentUser"));
             if (!currentUser) return;
 
-            // Update in db.users
             const userIndex = db.users.findIndex(u => u.username === currentUser.username);
             if (userIndex !== -1) {
                 db.users[userIndex].passport = dataURL;
                 save();
 
-                // Update currentUser in localStorage
                 currentUser.passport = dataURL;
                 localStorage.setItem("currentUser", JSON.stringify(currentUser));
 
-                // Refresh dashboard
                 showStudentDashboard(currentUser);
             }
         };
@@ -667,11 +634,11 @@
     // SUBMIT ENROLLMENT
     function submitEnrollment() {
         let user = JSON.parse(localStorage.getItem("currentUser"));
-        if (!user) { alert("Session expired, login again."); showSection("studentLogin"); return; }
+        if (!user) { alert("SESSION EXPIRED, LOGIN AGAIN."); showSection("studentLogin"); return; }
         let name = document.getElementById("fullName")?.value.trim();
         let email = document.getElementById("email")?.value.trim();
         let course = document.getElementById("courseSelect")?.value;
-        if (!name || !email || !course) { alert("Please fill all fields and select a course."); return; }
+        if (!name || !email || !course) { alert("PLEASE FILL ALL FIELDS AND SELECT A COURSE."); return; }
         db.enrollments.push({
             username: user.username,
             name: name,
@@ -683,7 +650,7 @@
         showStudentDashboard(user);
     }
 
-    // ---------- ADMIN DASHBOARD (with reject, delete, reset all, and certificate toggle) ----------
+    // ---------- ADMIN DASHBOARD (with course approval) ----------
     function showAdminDashboard() {
         showSection("adminDashboard");
         // Enrollment table rows
@@ -693,27 +660,42 @@
             enrollRows += `<tr>
                 <td>${e.username}</td><td>${e.name}</td><td>${e.course}</td><td>${e.status}</td>
                 <td>
-                    <button class="button small" onclick="approveEnrollment('${e.username}')">✓ Approve</button>
-                    <button class="button small danger" onclick="rejectEnrollment('${e.username}')">✗ Reject</button>
+                    <button class="button small" onclick="approveEnrollment('${e.username}')">✓ APPROVE</button>
+                    <button class="button small danger" onclick="rejectEnrollment('${e.username}')">✗ REJECT</button>
                 </td>
-                <td><input id='grade_${e.username}' value='${gradeObj ? gradeObj.grade : ""}' placeholder='grade' style='width:70px; display:inline; margin:0;'>
-                <button class="button small" onclick="setGrade('${e.username}')">Save</button></td>
-                <td><button class="button small danger" onclick="deleteEnrollment('${e.username}')">🗑️ Delete</button></td>
+                <td><input id='grade_${e.username}' value='${gradeObj ? gradeObj.grade : ""}' placeholder='GRADE' style='width:70px; display:inline; margin:0;'>
+                <button class="button small" onclick="setGrade('${e.username}')">SAVE</button></td>
+                <td><button class="button small danger" onclick="deleteEnrollment('${e.username}')">🗑️ DELETE</button></td>
             </tr>`;
         });
-        if (enrollRows === '') enrollRows = '<tr><td colspan="7" style="text-align:center;">No enrollments yet.</td></tr>';
+        if (enrollRows === '') enrollRows = '<tr><td colspan="7" style="text-align:center;">NO ENROLLMENTS YET.</td></tr>';
 
-        // Build course management UI
-        let courseItems = '';
-        db.courses.forEach((c, index) => {
-            courseItems += `<div class="course-item">
-                <span><strong>${c}</strong></span>
-                <button class="button small danger" onclick="deleteCourse(${index})">Delete</button>
+        // Separate approved and pending courses
+        let approvedCourses = db.courses.filter(c => c.approved);
+        let pendingCourses = db.courses.filter(c => !c.approved);
+
+        let approvedItems = '';
+        approvedCourses.forEach((c, idx) => {
+            approvedItems += `<div class="course-item">
+                <span><strong>${c.name}</strong> (APPROVED)</span>
+                <button class="button small danger" onclick="deleteCourse('${c.name}')">DELETE</button>
             </div>`;
         });
-        if (courseItems === '') courseItems = '<p>No courses added. Use form below to add.</p>';
+        if (approvedItems === '') approvedItems = '<p>NO APPROVED COURSES.</p>';
 
-        // ----- RESULTS SECTION (all grades with delete and certificate toggle) -----
+        let pendingItems = '';
+        pendingCourses.forEach((c, idx) => {
+            pendingItems += `<div class="course-item">
+                <span><strong>${c.name}</strong> (PENDING)</span>
+                <div>
+                    <button class="button small success" onclick="approveCourse('${c.name}')">✓ APPROVE</button>
+                    <button class="button small danger" onclick="disapproveCourse('${c.name}')">✗ DISAPPROVE</button>
+                </div>
+            </div>`;
+        });
+        if (pendingItems === '') pendingItems = '<p>NO PENDING COURSES.</p>';
+
+        // Results table
         let resultsRows = '';
         db.grades.forEach(g => {
             let enrollment = db.enrollments.find(e => e.username === g.username);
@@ -722,41 +704,40 @@
                     <td>${enrollment.name}</td>
                     <td>${enrollment.username}</td>
                     <td>${enrollment.course}</td>
-                    <td><input id='grade_result_${g.username}' value='${g.grade}' class='small-input' placeholder='grade'></td>
+                    <td><input id='grade_result_${g.username}' value='${g.grade}' class='small-input' placeholder='GRADE'></td>
                     <td class="action-cell">
-                        <button class="button small" onclick="updateGradeFromResults('${g.username}')">Update</button>
-                        <button class="button small danger" onclick="deleteGrade('${g.username}')">Delete</button>
+                        <button class="button small" onclick="updateGradeFromResults('${g.username}')">UPDATE</button>
+                        <button class="button small danger" onclick="deleteGrade('${g.username}')">DELETE</button>
                         ${g.certificateAllowed ? 
-                            `<button class="button small success" onclick="toggleCertificate('${g.username}', false)">✅ Revoke Cert</button>` : 
-                            `<button class="button small secondary" onclick="toggleCertificate('${g.username}', true)">⏳ Allow Cert</button>`}
+                            `<button class="button small success" onclick="toggleCertificate('${g.username}', false)">✅ REVOKE CERT</button>` : 
+                            `<button class="button small secondary" onclick="toggleCertificate('${g.username}', true)">⏳ ALLOW CERT</button>`}
                     </td>
                 </tr>`;
             } else {
                 resultsRows += `<tr>
-                    <td>Unknown</td>
+                    <td>UNKNOWN</td>
                     <td>${g.username}</td>
                     <td>—</td>
-                    <td><input id='grade_result_${g.username}' value='${g.grade}' class='small-input'></td>
+                    <td><input id='grade_result_${g.username}' value='${g.grade}' class='small-input' placeholder='GRADE'></td>
                     <td class="action-cell">
-                        <button class="button small" onclick="updateGradeFromResults('${g.username}')">Update</button>
-                        <button class="button small danger" onclick="deleteGrade('${g.username}')">Delete</button>
+                        <button class="button small" onclick="updateGradeFromResults('${g.username}')">UPDATE</button>
+                        <button class="button small danger" onclick="deleteGrade('${g.username}')">DELETE</button>
                         ${g.certificateAllowed ? 
-                            `<button class="button small success" onclick="toggleCertificate('${g.username}', false)">✅ Revoke Cert</button>` : 
-                            `<button class="button small secondary" onclick="toggleCertificate('${g.username}', true)">⏳ Allow Cert</button>`}
+                            `<button class="button small success" onclick="toggleCertificate('${g.username}', false)">✅ REVOKE CERT</button>` : 
+                            `<button class="button small secondary" onclick="toggleCertificate('${g.username}', true)">⏳ ALLOW CERT</button>`}
                     </td>
                 </tr>`;
             }
         });
-        if (resultsRows === '') resultsRows = '<tr><td colspan="5" style="text-align:center;">No grades recorded yet.</td></tr>';
+        if (resultsRows === '') resultsRows = '<tr><td colspan="5" style="text-align:center;">NO GRADES RECORDED YET.</td></tr>';
 
-        // ----- STUDENT DIRECTORY (all registered students) with rectangular thumbnails -----
+        // Student directory
         let studentRows = '';
         const students = db.users.filter(u => u.role === 'student');
         students.forEach(s => {
-            // Find enrollment status if any
             const enrollment = db.enrollments.find(e => e.username === s.username);
-            const status = enrollment ? enrollment.status : 'Not enrolled';
-            const passportHtml = s.passport ? `<img src="${s.passport}" class="thumbnail" alt="passport">` : 'None';
+            const status = enrollment ? enrollment.status : 'NOT ENROLLED';
+            const passportHtml = s.passport ? `<img src="${s.passport}" class="thumbnail" alt="PASSPORT">` : 'NONE';
             studentRows += `<tr>
                 <td>${s.username}</td>
                 <td>${s.fullName}</td>
@@ -766,72 +747,75 @@
                 <td>${status}</td>
             </tr>`;
         });
-        if (studentRows === '') studentRows = '<tr><td colspan="6" style="text-align:center;">No students registered.</td></tr>';
+        if (studentRows === '') studentRows = '<tr><td colspan="6" style="text-align:center;">NO STUDENTS REGISTERED.</td></tr>';
 
-        // ----- COURSEWARE MANAGEMENT -----
+        // Courseware options (only approved courses for adding materials)
         let coursewareOptions = '';
-        db.courses.forEach(c => coursewareOptions += `<option value="${c}">${c}</option>`);
+        approvedCourses.forEach(c => coursewareOptions += `<option value="${c.name}">${c.name}</option>`);
 
         let coursewareList = '';
         db.courseware.forEach((cw, index) => {
             coursewareList += `<div class="course-item">
                 <span><strong>${cw.course}</strong> — ${cw.title}</span>
-                <button class="button small danger" onclick="deleteCourseware(${index})">Delete</button>
+                <button class="button small danger" onclick="deleteCourseware(${index})">DELETE</button>
             </div>`;
         });
-        if (coursewareList === '') coursewareList = '<p>No course materials added.</p>';
+        if (coursewareList === '') coursewareList = '<p>NO COURSE MATERIALS ADDED.</p>';
 
         let adminHtml = `
             <div class="card">
-                <h3>👩‍🏫 Enrollment Management</h3>
+                <h3>👩‍🏫 ENROLLMENT MANAGEMENT</h3>
                 <table>
-                    <tr><th>User</th><th>Name</th><th>Course</th><th>Status</th><th>Actions</th><th>Grade</th><th>Delete</th></tr>
+                    <tr><th>USER</th><th>NAME</th><th>COURSE</th><th>STATUS</th><th>ACTIONS</th><th>GRADE</th><th>DELETE</th></tr>
                     ${enrollRows}
                 </table>
             </div>
             <div class="card">
                 <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-bottom: 15px;">
-                    <h3>📊 Student Results (all grades) – Certificate control</h3>
-                    <button class="button secondary small" onclick="downloadStudentDetailsCSV()">📥 Download All Student Details (CSV)</button>
+                    <h3>📊 STUDENT RESULTS (ALL GRADES) – CERTIFICATE CONTROL</h3>
+                    <button class="button secondary small" onclick="downloadStudentDetailsCSV()">📥 DOWNLOAD ALL STUDENT DETAILS (CSV)</button>
                 </div>
                 <table>
-                    <tr><th>Student name</th><th>Username</th><th>Course</th><th>Grade</th><th>Actions (incl. certificate)</th></tr>
+                    <tr><th>STUDENT NAME</th><th>USERNAME</th><th>COURSE</th><th>GRADE</th><th>ACTIONS (INCL. CERTIFICATE)</th></tr>
                     ${resultsRows}
                 </table>
             </div>
             <div class="card">
                 <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-bottom: 15px;">
-                    <h3>📋 Student Directory (All Registered Students)</h3>
-                    <button class="button small danger" onclick="resetStudentDirectory()">⚠️ Reset All Students</button>
+                    <h3>📋 STUDENT DIRECTORY (ALL REGISTERED STUDENTS)</h3>
+                    <button class="button small danger" onclick="resetStudentDirectory()">⚠️ RESET ALL STUDENTS</button>
                 </div>
                 <table>
-                    <tr><th>Username</th><th>Full Name</th><th>Email</th><th>Phone</th><th>Passport</th><th>Enrollment Status</th></tr>
+                    <tr><th>USERNAME</th><th>FULL NAME</th><th>EMAIL</th><th>PHONE</th><th>PASSPORT</th><th>ENROLLMENT STATUS</th></tr>
                     ${studentRows}
                 </table>
             </div>
             <div class="admin-subsection">
-                <h3>📚 Course Catalog (admin)</h3>
-                <div id="courseList">${courseItems}</div>
+                <h3>✅ APPROVED COURSES</h3>
+                <div id="approvedCourseList">${approvedItems}</div>
                 <hr>
-                <h4>Add New Course</h4>
-                <input id="newCourseName" placeholder="e.g. Generative AI" style="max-width:300px;">
-                <button class="button" onclick="addCourse()">Add Course</button>
+                <h3>⏳ PENDING COURSE APPROVALS</h3>
+                <div id="pendingCourseList">${pendingItems}</div>
+                <hr>
+                <h4>ADD NEW COURSE (REQUIRES APPROVAL)</h4>
+                <input id="newCourseName" placeholder="E.G. ADVANCED EVANGELISM" style="max-width:300px;">
+                <button class="button" onclick="addCourse()">ADD COURSE</button>
             </div>
             <div class="admin-subsection">
-                <h3>📁 Courseware Management</h3>
+                <h3>📁 COURSEWARE MANAGEMENT</h3>
                 <div>${coursewareList}</div>
                 <hr>
-                <h4>Add New Course Material</h4>
-                <select id="cwCourseSelect"><option value="">Select course</option>${coursewareOptions}</select>
-                <input id="cwTitle" placeholder="Title (e.g. Week 1 Lecture Notes)">
-                <textarea id="cwDescription" rows="2" placeholder="Short description (optional)"></textarea>
-                <button class="button" onclick="addCourseware()">Add Material</button>
+                <h4>ADD NEW COURSE MATERIAL (FOR APPROVED COURSES ONLY)</h4>
+                <select id="cwCourseSelect"><option value="">SELECT COURSE</option>${coursewareOptions}</select>
+                <input id="cwTitle" placeholder="TITLE (E.G. WEEK 1 LECTURE NOTES)">
+                <textarea id="cwDescription" rows="2" placeholder="SHORT DESCRIPTION (OPTIONAL)"></textarea>
+                <button class="button" onclick="addCourseware()">ADD MATERIAL</button>
             </div>
         `;
         document.getElementById("adminContent").innerHTML = adminHtml;
     }
 
-    // approve enrollment
+    // Enrollment actions
     function approveEnrollment(username) {
         let enrollment = db.enrollments.find(e => e.username === username);
         if (enrollment) enrollment.status = "Approved";
@@ -839,7 +823,6 @@
         showAdminDashboard();
     }
 
-    // reject enrollment
     function rejectEnrollment(username) {
         let enrollment = db.enrollments.find(e => e.username === username);
         if (enrollment) enrollment.status = "Rejected";
@@ -847,9 +830,8 @@
         showAdminDashboard();
     }
 
-    // delete enrollment and its grade
     function deleteEnrollment(username) {
-        if (confirm(`Delete enrollment for ${username}? This will also remove any grade.`)) {
+        if (confirm(`DELETE ENROLLMENT FOR ${username}? THIS WILL ALSO REMOVE ANY GRADE.`)) {
             db.enrollments = db.enrollments.filter(e => e.username !== username);
             db.grades = db.grades.filter(g => g.username !== username);
             save();
@@ -857,7 +839,7 @@
         }
     }
 
-    // set grade from enrollment table (default certificateAllowed = false)
+    // Grade actions
     function setGrade(username) {
         let gradeInput = document.getElementById("grade_" + username)?.value;
         let existing = db.grades.find(g => g.username === username);
@@ -867,11 +849,10 @@
             db.grades.push({ username, grade: gradeInput, certificateAllowed: false });
         }
         save();
-        alert("Grade saved. Certificate not allowed by default.");
+        alert("GRADE SAVED. CERTIFICATE NOT ALLOWED BY DEFAULT.");
         showAdminDashboard();
     }
 
-    // update grade from results table (keep existing certificateAllowed or default false)
     function updateGradeFromResults(username) {
         let gradeInput = document.getElementById("grade_result_" + username)?.value;
         let existing = db.grades.find(g => g.username === username);
@@ -881,11 +862,10 @@
             db.grades.push({ username, grade: gradeInput, certificateAllowed: false });
         }
         save();
-        alert("Grade updated. Certificate setting unchanged.");
+        alert("GRADE UPDATED. CERTIFICATE SETTING UNCHANGED.");
         showAdminDashboard();
     }
 
-    // Toggle certificate allowed for a grade
     function toggleCertificate(username, newState) {
         let grade = db.grades.find(g => g.username === username);
         if (grade) {
@@ -895,55 +875,77 @@
         }
     }
 
-    // ---------- DELETE GRADE (result) ----------
     function deleteGrade(username) {
-        if (confirm(`Delete grade for ${username}? This action cannot be undone.`)) {
+        if (confirm(`DELETE GRADE FOR ${username}? THIS ACTION CANNOT BE UNDONE.`)) {
             db.grades = db.grades.filter(g => g.username !== username);
             save();
             showAdminDashboard();
         }
     }
 
-    // ---------- RESET ALL STUDENTS (directory) ----------
+    // Student directory reset
     function resetStudentDirectory() {
-        if (!confirm("⚠️ Are you sure? This will permanently delete ALL registered students, their enrollments, and grades. This action cannot be undone.")) return;
+        if (!confirm("⚠️ ARE YOU SURE? THIS WILL PERMANENTLY DELETE ALL REGISTERED STUDENTS, THEIR ENROLLMENTS, AND GRADES. THIS ACTION CANNOT BE UNDONE.")) return;
         let studentUsernames = db.users.filter(u => u.role === "student").map(u => u.username);
-        // Remove all students from users
         db.users = db.users.filter(u => u.role !== "student");
-        // Remove enrollments and grades for those usernames
         db.enrollments = db.enrollments.filter(e => !studentUsernames.includes(e.username));
         db.grades = db.grades.filter(g => !studentUsernames.includes(g.username));
         save();
-        alert("Student directory reset successfully.");
+        alert("STUDENT DIRECTORY RESET SUCCESSFULLY.");
         showAdminDashboard();
     }
 
-    // ---------- COURSE MANAGEMENT (admin) ----------
+    // ---------- COURSE MANAGEMENT with approval ----------
     function addCourse() {
         let newCourse = document.getElementById("newCourseName")?.value.trim();
-        if (!newCourse) { alert("Enter course name"); return; }
-        if (db.courses.includes(newCourse)) { alert("Course already exists"); return; }
-        db.courses.push(newCourse);
+        if (!newCourse) { alert("ENTER COURSE NAME"); return; }
+        if (db.courses.some(c => c.name === newCourse)) { alert("COURSE ALREADY EXISTS"); return; }
+        // New courses are added as pending (approved: false)
+        db.courses.push({ name: newCourse, approved: false });
         save();
         showAdminDashboard();
-        renderPublicCourses(); // update public view if visible
+        // Public courses update only when approved
     }
 
-    function deleteCourse(index) {
-        if (confirm("Delete this course? It may affect existing enrollments (course names will remain in enrollments).")) {
-            db.courses.splice(index, 1);
+    function deleteCourse(courseName) {
+        if (confirm(`DELETE COURSE "${courseName}"? THIS ACTION CANNOT BE UNDONE.`)) {
+            db.courses = db.courses.filter(c => c.name !== courseName);
             save();
             showAdminDashboard();
             renderPublicCourses();
         }
     }
 
-    // ---------- COURSEWARE MANAGEMENT ----------
+    function approveCourse(courseName) {
+        let course = db.courses.find(c => c.name === courseName);
+        if (course) {
+            course.approved = true;
+            save();
+            showAdminDashboard();
+            renderPublicCourses();
+        }
+    }
+
+    function disapproveCourse(courseName) {
+        if (confirm(`DISAPPROVE AND DELETE COURSE "${courseName}"?`)) {
+            db.courses = db.courses.filter(c => c.name !== courseName);
+            save();
+            showAdminDashboard();
+            renderPublicCourses();
+        }
+    }
+
+    // Courseware management
     function addCourseware() {
         let course = document.getElementById("cwCourseSelect")?.value;
         let title = document.getElementById("cwTitle")?.value.trim();
         let description = document.getElementById("cwDescription")?.value.trim();
-        if (!course || !title) { alert("Please select a course and enter a title."); return; }
+        if (!course || !title) { alert("PLEASE SELECT A COURSE AND ENTER A TITLE."); return; }
+        // Ensure the course is approved (already filtered in dropdown, but double-check)
+        if (!db.courses.find(c => c.name === course && c.approved)) {
+            alert("CANNOT ADD MATERIALS TO UNAPPROVED COURSES.");
+            return;
+        }
         let newItem = {
             id: Date.now() + Math.random().toString(36).substr(2, 5),
             course: course,
@@ -957,36 +959,34 @@
     }
 
     function deleteCourseware(index) {
-        if (confirm("Delete this course material?")) {
+        if (confirm("DELETE THIS COURSE MATERIAL?")) {
             db.courseware.splice(index, 1);
             save();
             showAdminDashboard();
         }
     }
 
-    // ---------- VIEW / DOWNLOAD COURSEWARE (simulated) ----------
     function viewCourseware(id) {
         let item = db.courseware.find(cw => cw.id == id);
         if (!item) return;
-        alert(`Viewing: ${item.title}\nDescription: ${item.description}\n(Simulated – in a real system this would open a PDF or page.)`);
+        alert(`VIEWING: ${item.title}\nDESCRIPTION: ${item.description}\n(SIMULATED – IN A REAL SYSTEM THIS WOULD OPEN A PDF OR PAGE.)`);
     }
 
     function downloadCourseware(id) {
         let item = db.courseware.find(cw => cw.id == id);
         if (!item) return;
-        alert(`Download started for: ${item.title}\n(Simulated – in a real system this would download a file.)`);
+        alert(`DOWNLOAD STARTED FOR: ${item.title}\n(SIMULATED – IN A REAL SYSTEM THIS WOULD DOWNLOAD A FILE.)`);
     }
 
-    // ---------- EXPORT STUDENT DETAILS (CSV) ----------
+    // Export CSV
     function downloadStudentDetailsCSV() {
-        // Headers: Username, Full Name, Email, Course, Enrollment Status, Grade, Certificate Allowed
         let csvRows = [];
-        csvRows.push(['Username', 'Full Name', 'Email', 'Course', 'Enrollment Status', 'Grade', 'Certificate Allowed'].join(','));
+        csvRows.push(['USERNAME', 'FULL NAME', 'EMAIL', 'COURSE', 'ENROLLMENT STATUS', 'GRADE', 'CERTIFICATE ALLOWED'].join(','));
 
         db.enrollments.forEach(enroll => {
             let gradeObj = db.grades.find(g => g.username === enroll.username);
             let grade = gradeObj ? gradeObj.grade : '';
-            let certAllowed = gradeObj ? (gradeObj.certificateAllowed ? 'Yes' : 'No') : '';
+            let certAllowed = gradeObj ? (gradeObj.certificateAllowed ? 'YES' : 'NO') : '';
             let row = [
                 `"${enroll.username}"`,
                 `"${enroll.name}"`,
@@ -1012,21 +1012,20 @@
         window.URL.revokeObjectURL(url);
     }
 
-    // ---------- CERTIFICATE with rectangular passport photo ----------
+    // Certificate generation with rectangular image
     function generateCertificate(username) {
         let user = db.enrollments.find(e => e.username === username);
         let grade = db.grades.find(g => g.username === username);
-        if (!user || !grade) { alert("Incomplete data."); return; }
-        if (!grade.certificateAllowed) { alert("Certificate not yet approved by admin."); return; }
+        if (!user || !grade) { alert("INCOMPLETE DATA."); return; }
+        if (!grade.certificateAllowed) { alert("CERTIFICATE NOT YET APPROVED BY ADMIN."); return; }
 
-        // Get student's full user record for passport
         let studentUser = db.users.find(u => u.username === username);
         let passportHtml = '';
         if (studentUser && studentUser.passport) {
-            // rectangular image style
+            // rectangular image (border-radius 0)
             passportHtml = `<div style="margin-bottom:20px;"><img src="${studentUser.passport}" style="width:120px; height:120px; object-fit:cover; border:4px solid #0a2a43; border-radius:0;"></div>`;
         } else {
-            passportHtml = `<div style="margin-bottom:20px;"><div style="width:120px; height:120px; background:#ddd; display:inline-flex; align-items:center; justify-content:center; color:#666; border:4px solid #0a2a43; border-radius:0;">No photo</div></div>`;
+            passportHtml = `<div style="margin-bottom:20px;"><div style="width:120px; height:120px; background:#ddd; display:inline-flex; align-items:center; justify-content:center; color:#666; border:4px solid #0a2a43; border-radius:0;">NO PHOTO</div></div>`;
         }
 
         let win = window.open("", "_blank");
@@ -1034,59 +1033,57 @@
             <style>
                 body { font-family:Georgia,serif; padding:40px; text-align:center; }
                 .certificate-container { max-width:800px; margin:0 auto; border:2px solid #0a2a43; padding:30px; border-radius:20px; background:#fcf9f0; }
-                h1 { color:#0a2a43; }
+                h1 { color:#0a2a43; text-transform:uppercase; }
+                h2 { text-transform:uppercase; }
             </style>
             <div class="certificate-container">
-                <h1>Adequate Success Online College</h1>
+                <h1>TRUE WORSHIPPERS EVANGELICAL MINISTRIES INTERNATIONAL COLLEGE OF DISCIPLESHIP AND EVANGELISM</h1>
                 ${passportHtml}
-                <h2 style="color:#0a2a43;">🎓 Certificate of Completion</h2>
-                <p style="font-size:1.2rem;">This certifies that</p>
+                <h2 style="color:#0a2a43;">🎓 CERTIFICATE OF COMPLETION</h2>
+                <p style="font-size:1.2rem;">THIS CERTIFIES THAT</p>
                 <h3>${user.name}</h3>
-                <p>has successfully completed the course</p>
+                <p>HAS SUCCESSFULLY COMPLETED THE COURSE</p>
                 <h3>${user.course}</h3>
-                <p>with a final grade of <strong>${grade.grade}%</strong></p>
-                <p>Awarded on ${new Date().toLocaleDateString()}</p>
-                <p style="margin-top:40px;"><em>Adequate Success Online College</em></p>
+                <p>WITH A FINAL GRADE OF <strong>${grade.grade}%</strong></p>
+                <p>AWARDED ON ${new Date().toLocaleDateString()}</p>
+                <p style="margin-top:40px;"><em>TRUE WORSHIPPERS EVANGELICAL MINISTRIES INTERNATIONAL COLLEGE OF DISCIPLESHIP AND EVANGELISM</em></p>
             </div>
         `);
         win.print();
         win.close();
     }
 
-    // ---------- SHARE FUNCTION (Web Share API) - now points to signup ----------
+    // Share
     function shareSite() {
-        // Build URL with hash #signup
         const shareUrl = window.location.origin + window.location.pathname + '#signup';
         const shareData = {
-            title: 'Adequate Success Online University – Sign up for free courses!',
-            text: 'Join now to learn AI, Web Design, Excel & more. No tuition fees! Get certified.',
+            title: 'TWEMI COLLEGE OF DISCIPLESHIP AND EVANGELISM – SIGN UP FOR FREE COURSES!',
+            text: 'JOIN NOW TO LEARN DISCIPLESHIP, EVANGELISM, BIBLICAL LEADERSHIP & MORE. NO TUITION FEES! GET CERTIFIED.',
             url: shareUrl
         };
         if (navigator.share) {
             navigator.share(shareData)
-                .then(() => console.log('Shared successfully'))
                 .catch((error) => console.log('Error sharing:', error));
         } else {
-            // Fallback: prompt to copy link
             const textarea = document.createElement('textarea');
             textarea.value = shareUrl;
             document.body.appendChild(textarea);
             textarea.select();
             try {
                 document.execCommand('copy');
-                alert('Signup link copied to clipboard! Share it with friends.\n\nThe link will open directly on the signup page.');
+                alert('SIGNUP LINK COPIED TO CLIPBOARD! SHARE IT WITH FRIENDS.\n\nTHE LINK WILL OPEN DIRECTLY ON THE SIGNUP PAGE.');
             } catch (err) {
-                alert('Your browser does not support sharing. You can copy the URL from the address bar.');
+                alert('YOUR BROWSER DOES NOT SUPPORT SHARING. YOU CAN COPY THE URL FROM THE ADDRESS BAR.');
             }
             document.body.removeChild(textarea);
         }
     }
 
-    // ---------- NETLIFY CONTACT FORM (AJAX submission) ----------
+    // Netlify contact form
     const contactForm = document.getElementById('netlifyContact');
     if (contactForm) {
         contactForm.addEventListener('submit', async function(e) {
-            e.preventDefault(); // no page reload
+            e.preventDefault();
             const formData = new FormData(contactForm);
             try {
                 const response = await fetch('/', {
@@ -1098,24 +1095,23 @@
                     document.getElementById('contactSuccess').classList.remove('hidden');
                     contactForm.reset();
                 } else {
-                    alert('Oops! Something went wrong. Please try again later.');
+                    alert('OOPS! SOMETHING WENT WRONG. PLEASE TRY AGAIN LATER.');
                 }
             } catch (error) {
-                alert('Network error – please check your connection.');
+                alert('NETWORK ERROR – PLEASE CHECK YOUR CONNECTION.');
             }
         });
     }
 
-    // ---------- LOGOUT ----------
+    // Logout
     function logout() {
         localStorage.removeItem("currentUser");
         localStorage.removeItem("currentAdmin");
         showSection("home");
     }
 
-    // ---------- AUTO-RESTORE SESSION & HASH ROUTING ----------
+    // On load
     window.onload = function() {
-        // Check for user session first
         let currentUser = localStorage.getItem("currentUser");
         let currentAdmin = localStorage.getItem("currentAdmin");
         if (currentUser) {
@@ -1129,23 +1125,13 @@
             return;
         }
 
-        // If no active session, handle hash for direct signup link
         if (window.location.hash === '#signup') {
             showSection('signup');
         } else {
-            // Default to home
             showSection('home');
             renderPublicCourses();
         }
     };
 </script>
-<!-- 
-    Open Graph image: For the image to appear when sharing, you must upload the flyer image to your server 
-    (e.g., as /og-image.png) and ensure the og:image meta tag points to the correct URL. 
-    The clickable flyer above is an HTML representation that links back to the site.
-    Share button now points to #signup so new users land directly on the signup form.
-    Passport photos are rectangular (border-radius removed).
-    Added password reset feature for students on the login page.
--->
 </body>
 </html>
